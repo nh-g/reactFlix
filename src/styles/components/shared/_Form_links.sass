@@ -1,0 +1,40 @@
+.links-item,.files-item
+
+    display: grid
+    gap: 1em
+    align-items: center
+
+    grid-template-columns: 1fr 100px
+    grid-template-areas: "input button"
+    input
+        grid-area: input
+    input[type=file]
+        color: $white
+    .btn
+        grid-area: button
+        width: 100%
+
+.btn-clear-field
+    filter: brightness(.5)
+    border: 1px solid $red
+    color: $red
+    width: max-content
+    img
+        height: 12px
+        &:hover
+            filter: brightness(1)
+            transition: .1s ease
+    h4
+        color: inherit
+
+.btn-add-field
+    filter: brightness(.5)
+    border: 1px solid $yellow
+    color: $yellow
+    width: max-content
+
+    &:hover
+        filter: brightness(1)
+        transition: .1s ease
+    h4
+        color: inherit

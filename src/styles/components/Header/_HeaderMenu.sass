@@ -1,0 +1,102 @@
+.header-menu
+    position: fixed
+    background-image: linear-gradient(rgba(0, 0, 0,1 ), rgba(0, 0, 0,0 ))
+    color: #e2e2e2
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 70px
+    padding: 0 4%
+    .active
+        color: $white
+        font-weight: 500
+
+    .bloc
+        display: flex
+        align-items: center
+        a
+            margin-left: 0
+
+        .home
+            img
+                height: 25px
+                width: auto
+                margin-right: 25px
+
+    nav
+        display: flex
+        align-items: center
+        .nav-item
+            font-size: 14px
+            margin-left: 20px
+            &:hover
+                filter: brightness(.8)
+                transition: ease .1s
+.black
+    background: $black
+    transition: .3s ease
+
+.actions //Right side menu
+    display: flex
+    align-items: center
+    //background: blue
+
+    .dropdown
+
+        cursor: pointer
+        position: relative
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-left: 20px
+        .drop-arrow
+            margin-left: 8px
+
+        .caret
+            display: none
+        &:hover
+
+            .drop-arrow
+                transform: rotate(180deg)
+                transition: .2s ease
+            .caret
+                transition: .5s ease
+                position: absolute
+                top: 43px
+                right: 0px
+
+                display: flex
+                flex-direction: column
+                align-items: center
+
+                background: $black-transparent-80
+                border: 1px solid $gray6
+
+                height: min-content
+                width: 150px
+
+                padding: 1em 0 1em 0
+
+                p
+                    cursor: default
+                    text-transform: capitalize
+                    border-bottom: 1px solid $gray6
+                    width: 100%
+                    text-align: center
+                    margin-bottom: 1em
+                    padding-bottom: 1em
+
+                img
+                    position: absolute
+                    height: 7px
+                    top: -9px
+                    right: 25px
+                    transform: rotate(180deg)
+
+                button,a
+                    color: $white
+                    font-size: 13px
+                    padding: .3em 0
+                    &:hover
+                        text-decoration: underline

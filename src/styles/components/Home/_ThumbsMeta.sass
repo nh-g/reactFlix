@@ -1,0 +1,24 @@
+.track-item button
+    .thumbs-meta
+        z-index: 20000
+        position: absolute
+        bottom: 0
+        opacity: 0
+        height: 70px
+        width: 100%
+        background: #181818
+        display: flex
+        justify-content: center
+        color: $white
+        padding: 1em 1em 1.5em 1em
+
+        .details
+            grid-template-columns: repeat(3,max-content)
+            width: 100%
+            justify-content: flex-start
+
+.track-item button:hover
+    .thumbs-meta
+        opacity: 1
+        transition: opacity .3s ease
+        transition-delay: .6s

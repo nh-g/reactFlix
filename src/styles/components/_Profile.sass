@@ -1,0 +1,116 @@
+
+.page-profile
+
+    .head-title
+        color: $white
+        width: 100%
+        background: rgba(0,0,0,.3)
+        text-transform: capitalize
+        padding: .5em 1em
+    .bg
+        position: absolute
+        z-index: 0
+        height: 180px
+        width: 100%
+        object-fit: cover
+        filter: brightness(.8)
+
+    .container
+        z-index: 10
+        align-self: center
+        width: 100%
+
+        display: grid
+        gap: .3em
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(4,min-content)
+        grid-template-areas: "img" "box" "description" "buttons"
+
+        padding: 3em 1em
+        margin: 0
+
+        overflow: hidden
+
+        .avatar
+            z-index: 2
+            grid-area: img
+            align-self: center
+            justify-self: center
+            height: 200px
+            width: 200px
+
+            border-radius: 10em
+            box-shadow: 0 -4px 12px rgba(0,0 ,0 ,.3 )
+
+            object-fit: cover
+
+        .description
+            grid-area: description
+
+            background: rgba(255,255,255,.2)
+            border-radius: 1em
+            min-height: 80px
+            @include flex-vertical-centered
+
+            padding: 1.5em
+
+        .box
+            grid-area: box
+            display: grid
+            grid-gap: .3em
+            grid-auto-flow: row
+            grid-auto-rows: min-content
+            justify-content: flex-start
+            justify-self: center
+
+            h1
+                background: $white
+                height: min-content
+                width: max-content
+                transform: skewX(-20deg)
+                border-radius: 8px
+                margin: 0
+                text-transform: capitalize
+                padding: 0 .5em
+
+            h2,h4
+                padding: 0 .5em
+            a
+                h4
+                    display: flex
+                    align-items: center
+                    img
+                        margin-right: .3em
+                &:hover
+                    color: $white
+        .buttons
+            grid-area: buttons
+            justify-self: center
+
+            width: 100%
+            display: flex
+            align-items: center
+            *
+                margin: .3em
+
+    @media only screen and (min-width: $tabletBreakpoint)
+        .container
+            gap: 0
+            grid-template-columns: 5fr 12fr
+            grid-template-rows: 150px min-content min-content
+            grid-template-areas: "img bg" "img box" "description buttons"
+
+            margin-right: 70px
+            max-width: 1200px
+            margin: 0 auto
+            .avatar
+                height: 100%
+                width: 100%
+                border-radius: 1em 1em 0 0
+            .description
+                border-radius: 0 0 1em 1em
+            .box
+                justify-self: flex-start
+                margin: 0 3em
+            .buttons
+                padding-left: 2.5em

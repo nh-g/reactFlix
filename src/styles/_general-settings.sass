@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap')
+
+*
+  box-sizing: border-box
+  scroll-behavior: smooth
+  -ms-overflow-style: none
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  scrollbar-width: none
+
+:-webkit-scrollbar
+  display: none
+
+#modal
+  z-index: 10000
+
+.App
+  display: flex
+  flex-direction: column
+  font-family: 'Martel Sans', sans-serif
+
+main
+  margin-top: $header-height
+  min-height: calc(100vh - $footer-height - $header-height )
+
+ul,
+li,
+table,
+tr,
+td
+  margin: 0
+  padding: 0
+
+// Image sizes
+
+.img-50
+  height: 50px
+  width: 50px
+
+.img-40
+  height: 40px
+  width: 40px
+
+.img-30
+  height: 30px
+  width: 30px
+
+.img-bw
+  filter: grayscale(1)
+
+.img-2em
+  width: 2em
+  height: auto
+
+.img-1em
+  width: 1em
+  height: auto
+
+textarea:focus, input:focus
+  outline: none

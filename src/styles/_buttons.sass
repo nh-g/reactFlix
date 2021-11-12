@@ -1,0 +1,178 @@
+button
+  background: none
+  border: none
+  cursor: pointer
+
+.btn
+  cursor: pointer
+  height: $mob-button-height
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0 12px
+  border-radius: 8px
+
+.btn-main
+  $color: $gray2
+  $secondcolor: $yellow
+
+  background: $color
+  border: 1px solid $color
+  transform: skewX(-20deg) translateY(-2px)
+  box-shadow: 3px 3px 0 orange
+
+  h3,h4
+    color: $secondcolor
+    text-transform: capitalize
+    transform: skewX(20deg)
+
+  .icon-btn
+    width: 20px
+    height: 20px
+    margin: 6px
+    filter: invert(1)
+
+  &:hover
+    transform: skewX(-20deg)
+    box-shadow: unset
+    transition: ease 0.1s
+
+  &:disabled
+    filter: saturate(0)
+    opacity: 0.05
+
+.btn-ghost
+  $color: $gray2
+  $secondcolor: $white
+
+  transform: skewX(-20deg) translateY(-2px)
+
+  background: none
+  border: 2px solid $color
+  box-shadow: 3px 3px 0 orange
+
+  h3,h4
+    color: $color
+    text-transform: capitalize
+    transform: skewX(20deg)
+
+  .icon-btn
+    width: 20px
+    height: 20px
+    margin: 6px
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(-45deg)
+
+  &:hover
+    transform: skewX(-20deg)
+    transition: ease 0.1s
+    box-shadow: unset
+    .icon-btn
+      filter: invert(1)
+
+.btn-300
+  width: 300px
+
+.btn-140
+  width: 140px
+
+.btn-180
+  width: 100%
+  max-width: 180px
+
+.btn-delete
+  background: $red
+  color: $gray2
+  border-radius: 2px
+
+  filter: brightness(.9)
+  &:hover
+    filter: brightness(1)
+    transition: ease .1s
+
+.btn-orange
+  background: orange
+  color: $black
+  filter: brightness(.9)
+  &:hover
+    filter: brightness(1)
+    transition: ease .1s
+
+.btn-signin
+  border-radius: 4px
+
+  font-size: 16px
+  font-weight: 700
+  margin: 24px 0 12px
+  padding: 16px
+  background: $red
+  color: $white
+
+.btn-signup
+  border-radius: 2px
+
+  font-size: 17px
+  font-weight: 400
+  margin: 0
+  padding: 0.75rem 25.33333333px
+
+  background: $red
+  color: $white
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px 0px
+
+.btn-play
+  display: flex
+  align-items: center
+  background: $white
+
+  padding: .8rem 2.4rem
+  border-radius: 4px
+
+  font-size: 1.6rem
+  font-weight: bold
+  img
+    margin-right: .6em
+  &:hover
+    background: rgba(255,255 ,255 ,.8)
+    transition: .3s ease
+
+.btn-more-info
+  display: flex
+  align-items: center
+  background: rgba(109,109,110,0.6)
+  color: $white
+
+  padding: .8rem 2.4rem
+  border-radius: 4px
+
+  font-size: 1.6rem
+  font-weight: bold
+  img
+    margin-right: .6em
+  &:hover
+    background: rgba(109,109,110,0.4)
+    transition: .3s ease
+
+.btn-season
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  min-width: 8em
+
+  position: relative
+  font-size: 1.2em
+  background-color: rgb(36, 36, 36)
+  padding: 0.5em 1em
+
+  color: white
+  cursor: pointer
+  border: 0.1em solid rgb(77, 77, 77)
+  border-radius: 0.2em
+  img
+    height: 5px
+    margin-left: .6em
+
+.open
+  img
+    transition: .2s ease
+    transform: rotate(180deg)

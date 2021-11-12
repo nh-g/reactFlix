@@ -1,0 +1,61 @@
+.episodes
+    min-height: 150px
+    .empty
+        color: $gray8
+        width: 100%
+        text-align: center
+        padding: 3em
+        //animation: blink 1.9s ease-in infinite
+
+    .episode
+        cursor: pointer
+        @include flex-full-centered
+        border-top: 1px solid
+        border-bottom: 1px solid
+        border-color: $gray4
+        height: 150px
+
+        padding: 16px
+        color: $white
+
+        width: 100%
+
+        display: grid
+        align-items: center
+
+        grid-template-columns: 50px min-content 1fr
+        grid-template-rows: 50px 1fr
+        grid-template-areas: "number illustration title" "number illustration description"
+
+        h1
+            grid-area: number
+            justify-self: center
+        .thumb
+            grid-area: illustration
+            display: flex
+            flex-direction: column
+            background: $gray4
+            img
+                overflow: hidden
+                height: 93px
+                width: 166px
+                object-fit: cover
+            .bar
+                height: 4px
+                width: 100%
+                background: $red
+        .title
+            grid-area: title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 16px
+        .description
+            grid-area: description
+            justify-self: flex-start
+            text-align: left
+            padding: 16px
+
+        &:hover
+            background: rgba(255,255,255,.1)
+            border-radius: 4px

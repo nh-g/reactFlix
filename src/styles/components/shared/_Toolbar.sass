@@ -1,0 +1,132 @@
+
+.toolbar
+    position: absolute
+    top: $header-height
+    right: 0
+    z-index: 10
+    background: $gray1
+
+    display: flex
+    justify-content: flex-end
+
+    width: 100%
+    height: 50px
+    padding: 0 1em
+
+    h4
+        display: none
+
+    .buttons
+
+        display: grid
+        width: 100%
+        grid-template-columns: repeat(3,50px) 1fr 50px
+        grid-template-rows: 1fr
+        grid-template-areas: " calendar profile logout null open"
+
+        justify-items: center
+
+        .open
+            grid-area: open
+
+            img
+                transform: rotate(0deg)
+                transition: ease .3s
+
+        .calendar
+            grid-area: calendar
+
+        .profile
+            grid-area: profile
+
+        .logout
+            grid-area: logout
+
+        .btn
+            width: min-content
+            filter: saturate(0)
+
+            &:hover
+                filter: saturate(1)
+
+    @media only screen and (min-width: $tabletBreakpoint)
+        position: fixed
+        width: 70px
+        height: 100%
+        top: 0
+
+        padding: 80px 1em 1em 1em
+        justify-content: flex-start
+
+        .buttons
+
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3,50px)
+            grid-template-areas: "open" "calendar" "profile" "logout"
+
+            .open
+                img
+                    transform: rotate(90deg)
+                h4
+                    color: $white
+
+/** Toolbar open **/
+.toolbar-open
+
+    width: 100%
+    transition: width .3s ease
+    height: max-content
+
+    .buttons
+        width: 100%
+        gap: .3em
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(4,50px)
+        grid-template-areas: "open" "calendar" "profile" "logout"
+
+        .calendar
+            grid-area: calendar
+            justify-content: flex-end
+
+        .logout
+            grid-area: logout
+            justify-content: flex-end
+        .open
+            width: 100%
+            grid-area: open
+
+            display: grid
+            grid-template-columns: 1fr 50px
+            align-items: center
+            img
+                transform: rotate(-90deg)
+                transition: ease .3s
+
+            h4
+                display: block
+                margin: 0
+                justify-self: center
+                color: $white
+
+        .toolbar-item
+
+            width: 100%
+            display: grid
+            grid-template-columns: 1fr 50px
+            justify-content: center
+            align-items: center
+            border: 1px solid transparent
+            padding: 0
+            &:hover
+                border-color: $yellow
+            h4
+                display: block
+                transition: .5s ease
+                color: $yellow
+                justify-self: center
+            img
+
+                justify-self: center
+    @media only screen and (min-width: $tabletBreakpoint) //toolbar desktop OPEN
+        height: 100%
+        width: 220px

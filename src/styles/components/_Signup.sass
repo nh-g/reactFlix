@@ -1,0 +1,77 @@
+.signin
+    position: absolute
+    z-index: 2000
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    height: $header-height
+    width: 100%
+    text-align: right
+    padding-right: 3%
+    font-size: 19px
+    border-bottom: 1px solid #dadada
+    strong
+        font-weight: 600
+        color: $gray3
+    &:hover
+
+        text-decoration: underline
+
+.page-signup
+    background: $white
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    a:hover
+        text-decoration: underline
+
+    .line
+        background: #d6d6d6
+        height: 1px
+        width: 100%
+
+    .bloc
+        padding: 24px 32px
+        form
+            width: 440px
+
+            h1
+                font-weight: 700
+                font-size: 23px
+                color: $gray3
+                margin: 0 0 0.4em
+
+            h2
+                color: $gray3
+                margin-bottom: 10px
+            label
+                width: 100%
+                height: 100%
+
+                input
+                    width: 100%
+                    background: none
+                    color: $gray3
+                    border: 1px solid $redDark
+                    height: 60px
+                    border-radius: 2px
+                    font-size: 16px
+
+                    &:placeholder
+                        font-size: 16px
+
+                .error
+                    color: $red
+                    margin: 2px 0 10px 0
+
+            .btn-signup
+                width: 100%
+
+    .footer-background
+        position: absolute
+        bottom: 0
+        height: $footer-height
+        width: 100%
+        background-color: #f3f3f3
+        border-top: 1px solid #e5e5e5

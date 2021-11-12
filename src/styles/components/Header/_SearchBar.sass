@@ -1,0 +1,41 @@
+.searchbar
+    display: flex
+    align-items: center
+    height: 34px
+    width: 34px
+
+    border: 1px solid transparent
+
+    transition: width .3s ease
+
+    button img
+        height: 1.3em
+        margin-right: 15px
+        margin-left: 2px
+        input
+            display: none
+
+.searchbar-open
+    display: flex
+    align-items: center
+    height: 34px
+    width: 250px
+
+    flex-direction: row
+    background: $black-transparent-50
+
+    border: 1px solid $white
+    transition: width .3s ease
+    button img
+        height: 1.3em
+        margin-right: 15px
+        margin-left: 2px
+
+    input[type=text]
+        display: block
+        align-items: center
+        width: 100%
+        height: 100%
+        min-height: unset
+        background: none
+        padding: 0

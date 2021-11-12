@@ -1,0 +1,51 @@
+.sorter
+    position: relative
+    width: 100%
+    color: $white
+    padding-top: 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 2em 0 1em
+    h3
+        font-weight: 700
+        font-size: 24px
+
+    .caret
+        position: absolute
+        top: 72px
+        background-color: rgb(36, 36, 36)
+
+        min-width: 8em
+
+        position: absolute
+        right: 0px
+
+        cursor: pointer
+        color: white
+        list-style-type: none
+        border: 0.1em solid rgb(77, 77, 77)
+        margin-top: -0.5em
+
+        z-index: 1
+        white-space: nowrap
+        column-gap: 1.8em
+
+        max-height: max(10em, 322.703px - 2rem)
+        overflow: auto
+        padding: 1em 0
+
+        button
+            width: 100%
+
+            font-size: 1em
+            color: $white
+
+            padding: .8em
+
+            &:hover
+                background: rgba(255,255,255,.1)
+
+            em
+                color: $gray7
+                font-style: normal
