@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Learn Amazing Skills",
+    "description": "With the best teachers, learn the new skills that will makes you become a social network star.With the best teachers, learn the new skills that will makes you become a social network star. ",
+    "imageURL": "zidane.png",
+    "logoURL": "field.png"
+  },
+  {
+    "title": "Develop Tactics",
+    "description": "It is not only a matter of technical abilities. Improve you  tactical capacities with our courses.It is not only a matter of technical abilities. Improve you  tactical capacities with our courses.",
+    "imageURL": "mbappe.png",
+    "logoURL": "board.png"
+  },
+  {
+    "title": "Challenge yourself",
+    "description": "Several level of diffculties are available, create an account and checkout our new courses.Several level of diffculties are available, create an account and checkout our new courses.",
+    "imageURL": "costa.png",
+    "logoURL": "cage.png"
+  }
+]

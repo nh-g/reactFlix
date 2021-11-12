@@ -1,0 +1,23 @@
+[
+  {
+    "key": "username",
+    "label": "Username",
+    "placeholder": "Username",
+    "type": "text",
+    "required": true
+  },
+  {
+    "key": "email",
+    "label": "Email",
+    "placeholder": "Email",
+    "type": "email",
+    "required": true
+  },
+  {
+    "key": "password",
+    "label": "Password",
+    "placeholder": "Add a password",
+    "type": "password",
+    "required": true
+  }
+]
