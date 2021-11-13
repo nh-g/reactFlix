@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 //Local files
 import reactflix from "assets/img/reactflix.png";
 
+import Actions from "./Actions";
+
 const HeaderMenu: FC = () => {
   // Local state
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -41,6 +43,7 @@ const HeaderMenu: FC = () => {
           </NavLink>
         </nav>
       </div>
+      <Actions />
     </header>
   );
 };
