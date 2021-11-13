@@ -6,6 +6,7 @@ import { useState, FC } from "react";
 import cross from "assets/icns/cross.png";
 import Episodes from "./Episodes";
 import Sorter from "./Sorter";
+import PlayerControlled from "./PlayerControlled";
 import iTitle from "types/iTitle";
 import Meta from "./Meta";
 
@@ -31,6 +32,11 @@ const Modal: FC<IProps> = ({ isOpen, onClose, element }) => {
         </button>
 
         <div className="illustration">
+          <PlayerControlled
+            video={video}
+            onPlay={() => setTitleVisibility(false)}
+            onPause={() => setTitleVisibility(true)}
+          />
           {/* <div className="gradient" /> disabled : hides the Youtube controls */}
           {titleVisibility && (
             <div className="bloc">
