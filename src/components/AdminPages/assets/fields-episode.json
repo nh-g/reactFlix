@@ -1,0 +1,35 @@
+[
+  {
+    "key": "video_url",
+    "label": "Youtube Link",
+    "placeholder": "Youtube URL...",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "description",
+    "label": "Description",
+    "placeholder": "Short description",
+    "type": "textarea",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "duration",
+    "label": "Duration",
+    "placeholder": "44m",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+
+  {
+    "key": "thumbnail_url",
+    "label": "Image Link",
+    "placeholder": "URL...",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  }
+]

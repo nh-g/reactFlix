@@ -1,0 +1,74 @@
+[
+  {
+    "key": "title",
+    "label": "Title",
+    "placeholder": "Title",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "description",
+    "label": "Description",
+    "placeholder": "Short description",
+    "type": "textarea",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "image_url",
+    "label": "Image link",
+    "placeholder": "http://www... .jpeg",
+    "type": "text",
+    "mode": "create",
+    "required": false
+  },
+  {
+    "key": "trailer",
+    "label": "Youtube trailer ",
+    "placeholder": "URL...",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "year",
+    "label": "Year ",
+    "placeholder": "2020",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "duration",
+    "label": "Duration ",
+    "placeholder": "2 seasons or 46m or 1h30",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "cast",
+    "label": "Cast ",
+    "placeholder": "Actor 1,Actor 2,...",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "genres",
+    "label": "Genres",
+    "placeholder": "Drama, Comedy,...",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  },
+  {
+    "key": "tags",
+    "label": "Tags",
+    "placeholder": "Italian, Mafia,...",
+    "type": "text",
+    "mode": "create",
+    "required": true
+  }
+]
