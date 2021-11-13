@@ -6,6 +6,7 @@ import { FC } from "react";
 import face from "assets/icns/face.png";
 import droparrow from "assets/icns/droparrow.svg";
 import { useAuth } from "state/AuthProvider";
+import SearchBar from "./SearchBar";
 
 const Actions: FC = () => {
   // Global state
@@ -15,6 +16,7 @@ const Actions: FC = () => {
 
   return (
     <div className="actions">
+      <SearchBar />
 
       <div className="dropdown">
         <img src={face} alt="" />
