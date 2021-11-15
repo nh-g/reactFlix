@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 //Local Files
-import SortButton from "components/AdminPages/SortButton";
+import SortButton from "components/admin/SortButton";
 
 interface IProps {
   hook: any[];

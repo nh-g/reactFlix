@@ -2,7 +2,7 @@
 import { useState, FC } from "react";
 
 //Local imports
-import Sorter from "components/AdminPages/Sorter";
+import Sorter from "components/admin/Sorter";
 import CreateForm from "./forms/CreateForm";
 import EditForm from "./forms/EditForm";
 import { useTitles } from "state/TitlesProvider";
