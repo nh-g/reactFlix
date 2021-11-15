@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 
 //Local imports
 import fields from "./assets/fields-recover.json";
-import InputField from "../shared/InputField";
+import InputField from "../../components/shared/InputField";
 import { recover } from "scripts/auth";
 import authPageBackground from "assets/img/authBackground.jpg";
 

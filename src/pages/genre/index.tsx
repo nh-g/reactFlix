@@ -6,12 +6,12 @@ import { FC } from "react";
 import { useTitles } from "state/TitlesProvider";
 import useFetch from "hooks/useFetch";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbsCategory from "./ThumbsCategory";
+import ThumbnailsGenre from "./ThumbnailsGenre";
 import Player from "components/shared/Player";
 import { getCategory } from "scripts/methods";
-import Hero from "../shared/Hero";
+import Hero from "../../components/shared/Hero";
 
-const Category: FC = () => {
+const Genre: FC = () => {
   // Global state
   //@ts-ignore
   const { dispatchTitles } = useTitles();
@@ -54,9 +54,9 @@ const Category: FC = () => {
 
             {categoryTitles.length === 0 && <h1>No titles found ... </h1>}
             {categoryTitles.length > 0 && (
-              <ThumbsCategory data={categoryTitles}>
+              <ThumbnailsGenre data={categoryTitles}>
                 {getHeading(category)}
-              </ThumbsCategory>
+              </ThumbnailsGenre>
             )}
           </main>
         </>
@@ -64,4 +64,4 @@ const Category: FC = () => {
     </>
   );
 };
-export default Category;
+export default Genre;

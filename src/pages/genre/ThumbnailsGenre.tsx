@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 //Local Files
-import ThumbsItem from "components/browse/ThumbsItem";
+import ThumbsItem from "pages/browse/ThumbsItem";
 import iTitle from "types/iTitle";
 
 interface IProps {
@@ -10,7 +10,7 @@ interface IProps {
   children: string;
 }
 
-const ThumbsCategory: FC<IProps> = ({ data, children }) => {
+const ThumbnailsGenre: FC<IProps> = ({ data, children }) => {
   const Thumbnails = data.map((item, index) => (
     <ThumbsItem key={index} item={item} />
   ));
@@ -24,4 +24,4 @@ const ThumbsCategory: FC<IProps> = ({ data, children }) => {
     </>
   );
 };
-export default ThumbsCategory;
+export default ThumbnailsGenre;

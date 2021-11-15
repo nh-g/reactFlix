@@ -5,7 +5,7 @@ import { useHistory, Link } from "react-router-dom";
 
 //Local imports
 import fields from "./assets/fields-signup.json";
-import InputField from "../shared/InputField";
+import InputField from "../../components/shared/InputField";
 import { createAccount } from "scripts/auth";
 import { useAuth } from "state/AuthProvider";
 import { createDocumentWithId } from "scripts/fireStore";

@@ -7,7 +7,7 @@ import { searchTitle } from "scripts/methods";
 import { useTitles } from "state/TitlesProvider";
 import useFetch from "hooks/useFetch";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbsCategory from "../genre/ThumbsCategory";
+import ThumbnailsGenre from "../genre/ThumbnailsGenre";
 
 const Search: FC = () => {
   // Global state
@@ -29,7 +29,7 @@ const Search: FC = () => {
         <main className="page-home page-search">
           {results.length === 0 && <h1>No titles found ... </h1>}
           {results.length > 0 && (
-            <ThumbsCategory data={results}>Results</ThumbsCategory>
+            <ThumbnailsGenre data={results}>Results</ThumbnailsGenre>
           )}
         </main>
       )}
