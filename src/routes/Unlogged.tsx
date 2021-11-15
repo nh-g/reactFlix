@@ -2,9 +2,9 @@
 import { Route } from "react-router-dom";
 
 // Project files
-import Login from "components/AuthPages/Login";
-import SignUp from "components/AuthPages/Signup";
-import Recover from "components/AuthPages/Recover";
+import Login from "components/authentication/Login";
+import SignUp from "components/authentication/Signup";
+import Recover from "components/authentication/Recover";
 import Header from "components/shared/Header";
 
 export default function Unlogged() {

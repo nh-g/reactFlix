@@ -4,8 +4,8 @@ import { Route } from "react-router-dom";
 // Project files
 import { useAuth } from "state/AuthProvider";
 import Home from "components/Home/Home";
-import Login from "components/AuthPages/Login";
-import SignUp from "components/AuthPages/Signup";
+import Login from "components/authentication/Login";
+import SignUp from "components/authentication/Signup";
 import HeaderMenu from "components/shared/HeaderMenu";
 import Admin from "components/admin/Admin";
 import Search from "components/Search/Search";
