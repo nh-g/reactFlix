@@ -2,7 +2,7 @@
 //NPM Packages
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import reactflixBg from "assets/img/reactflixBg.jpeg";
+import authPageBackground from "assets/img/authBackground.jpg";
 
 //Local imports
 import fields from "./assets/fields-login.json";
@@ -71,7 +71,7 @@ export default function Login() {
   return (
     <>
       <main className="page-login">
-        <img src={reactflixBg} alt="bg" className="bg" />
+        <img src={authPageBackground} alt="bg" className="bg" />
 
         <div className="bloc">
           <form onSubmit={onSubmit}>

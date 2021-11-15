@@ -7,7 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 import fields from "./assets/fields-recover.json";
 import InputField from "../shared/InputField";
 import { recover } from "scripts/auth";
-import reactflixBg from "assets/img/reactflixBg.jpeg";
+import authPageBackground from "assets/img/authBackground.jpg";
 
 export default function Recover() {
   //Local states
@@ -58,7 +58,7 @@ export default function Recover() {
   ));
   return (
     <main className="page-login recover">
-      <img src={reactflixBg} alt="bg" className="bg" />
+      <img src={authPageBackground} alt="bg" className="bg" />
       <div className="logo">reactflix</div>
       <div className="bloc">
         <form onSubmit={onSubmit}>
