@@ -39,7 +39,7 @@ export default function Signup() {
     setLoggedIn(true);
     setUser({ ...newUser, id: uid });
 
-    history.push("/");
+    history.push("/browse");
   }
 
   function onFailure(code) {

@@ -39,7 +39,7 @@ export default function Login() {
     setUser(document);
     setLoggedIn(true);
     if (remember) localStorage.setItem("uid", uid);
-    history.push("/");
+    history.push("/browse");
   }
 
   function onFailure(code) {

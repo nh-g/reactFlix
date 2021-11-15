@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 
 // Project files
 import { useAuth } from "state/AuthProvider";
-import Home from "components/home/Home";
+import Browse from "components/browse";
 import Login from "components/authentication/Login";
 import SignUp from "components/authentication/Signup";
 import HeaderMenu from "components/shared/HeaderMenu";
@@ -17,7 +17,7 @@ export default function Logged() {
   return (
     <>
       <HeaderMenu />
-      <Route exact path="/" component={Home} />
+      <Route exact path="/browse" component={Browse} />
       <Route component={Login} path="/login" />
       <Route component={SignUp} path="/signup" />
       <Route component={Search} exact path="/search/" />
