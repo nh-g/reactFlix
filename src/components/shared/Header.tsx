@@ -8,7 +8,7 @@ import reactflix from "assets/img/reactflix.png";
 const Header: FC = () => {
   return (
     <header id="header">
-      <NavLink to="/" className="home">
+      <NavLink to="/browse" className="home">
         <img src={reactflix} alt="Home" />
       </NavLink>
     </header>

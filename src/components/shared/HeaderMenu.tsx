@@ -29,7 +29,7 @@ const HeaderMenu: FC = () => {
         </NavLink>
 
         <nav>
-          <NavLink to="/" className="nav-item">
+          <NavLink to="/browse" className="nav-item">
             Home
           </NavLink>
           <NavLink to="/category/serie" className="nav-item">
