@@ -1,5 +1,5 @@
 import './HeaderHero.css';
-import bgImage from '../../assets/images/home-hero-bg.jpg';
+import bgImage from "assets/img/authBackground.jpg";
 import {
   Hero,
   Header,
@@ -24,10 +24,10 @@ const HeaderHero = () => {
       </Header>
       <div className="HeaderHero__content">
         <Feature
-          title="Unlimited movies, TV shows, and more."
-          titleFontSize="4rem"
+          title="Unlimited films, TV programmes and more."
+          titleFontSize="3rem"
         >
-          Watch anywhere. Cancel anytime.
+          Watch anywhere. Cancel at any time.
         </Feature>
         <RedirectSignupForm />
       </div>

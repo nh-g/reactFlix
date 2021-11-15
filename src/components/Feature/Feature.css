@@ -27,14 +27,17 @@
 }
 
 .Feature__title {
+  margin-top: 30px;
   font-size: 3rem;
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .Feature__desc {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  line-height: 1.4;
+  font-size: 1.4rem;
+  margin: 1rem auto;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .Feature__animation {

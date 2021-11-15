@@ -4,7 +4,8 @@
 }
 
 .Header__logo {
-  width: 170px;
+  width: 10.4375 rem;
+  height: 2.8125 rem;
 }
 
 .Header__rightSide {
