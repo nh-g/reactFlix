@@ -2,7 +2,7 @@
 import { useState, FC } from "react";
 
 //Local Files
-import Modal from "components/Modal/Modal";
+import Modal from "components/modal/Modal";
 import { fixBG, unfixBG } from "scripts/modal";
 import iTitle from "types/iTitle";
 import ThumbsMeta from "components/shared/ThumbsMeta";

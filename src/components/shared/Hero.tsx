@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 //Local Files
 import play from "assets/icns/play.png";
 import info from "assets/icns/info.png";
-import Modal from "components/Modal/Modal";
+import Modal from "components/modal/Modal";
 import { fixBG, unfixBG } from "scripts/modal";
 import iTitle from "types/iTitle";
 

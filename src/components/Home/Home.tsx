@@ -4,7 +4,7 @@ import { FC } from "react";
 //Local imports
 import useFetch from "hooks/useFetch";
 import Thumbs from "components/shared/Thumbs";
-import Thumbs10 from "components/Home/Thumbs10";
+import Thumbs10 from "components/home/Thumbs10";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import { getCategory, getTop10 } from "scripts/methods";

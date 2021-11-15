@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 //Local Files
-import ThumbsItem from "components/Home/ThumbsItem";
+import ThumbsItem from "components/home/ThumbsItem";
 import iTitle from "types/iTitle";
 
 interface IProps {

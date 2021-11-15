@@ -1,5 +1,5 @@
 //NPM Packages
-import ThumbsItem from "components/Home/ThumbsItem";
+import ThumbsItem from "components/home/ThumbsItem";
 import { FC } from "react";
 import iTitle from "types/iTitle";
 

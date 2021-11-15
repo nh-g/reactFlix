@@ -7,7 +7,7 @@ import { searchTitle } from "scripts/methods";
 import { useTitles } from "state/TitlesProvider";
 import useFetch from "hooks/useFetch";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbsCategory from "../Category/ThumbsCategory";
+import ThumbsCategory from "../genre/ThumbsCategory";
 
 const Search: FC = () => {
   // Global state
