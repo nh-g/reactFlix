@@ -29,7 +29,7 @@ const Footer: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
   ...props
 }) => {
   return (
-    <footer className={mergeClassNames('Footer', props.className)}>
+    <footer className={mergeClassNames("Footer", props.className)}>
       <div className="Footer__inner">
         {showSocialMediaIcons && (
           <div className="Footer__socialMedia">
@@ -40,7 +40,7 @@ const Footer: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
           </div>
         )}
         {showHotlineNumber && (
-          <h3 className="Footer__hotline">Questions? Call 0800-000-9677</h3>
+          <h3 className="Footer__hotline">Questions? Call 020-79 06 35</h3>
         )}
 
         <div className="Footer__menu">
@@ -49,7 +49,7 @@ const Footer: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
         {showLanguagePicker && (
           <LanguagePicker
             className={mergeClassNames(
-              'Footer__languagePicker',
+              "Footer__languagePicker",
               languagePickerClassName
             )}
           />

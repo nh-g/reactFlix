@@ -10,7 +10,6 @@ import { getDocument } from "scripts/fireStore";
 import Logged from "routes/Logged";
 import Unlogged from "routes/Unlogged";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import Footer from "components/shared/Footer";
 
 export default function App() {
   // Global state
@@ -42,7 +41,6 @@ export default function App() {
       {status === 1 && (
         <BrowserRouter>
           <Switch>{loggedIn ? <Logged /> : <Unlogged />}</Switch>
-          <Footer />
         </BrowserRouter>
       )}
     </div>
