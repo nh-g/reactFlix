@@ -1,5 +1,5 @@
-import './Home.css';
-import footerLinks from '../../data/home-footer-links.json';
+import "./Home.css";
+import footerLinks from "../../data/home-footer-links.json";
 import {
   FaqAccordion,
   Feature,
@@ -9,7 +9,7 @@ import {
   PhoneAnimation,
   RedirectSignupForm,
   TVAnimation,
-} from 'components';
+} from "components";
 
 interface Props {}
 
@@ -32,7 +32,7 @@ const Home = (props: Props) => {
       <div className="Home__row">
         <div className="Home__feature">
           <Feature
-            title="Download your shows to watch offline."
+            title="Download your programmes to watch offline."
             animation={<PhoneAnimation />}
             flipped
           >

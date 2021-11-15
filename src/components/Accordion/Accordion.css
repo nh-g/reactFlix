@@ -6,6 +6,7 @@
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 50px;
+  font-weight: bold;
 }
 
 @media (max-width: 992px) {
