@@ -1,0 +1,37 @@
+.LanguagePicker {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  position: relative;
+  display: block;
+  border-radius: 2px;
+}
+
+.LanguagePicker select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  padding: 8px 35px 8px 20px;
+  font-size: 0.9rem;
+}
+
+.LanguagePicker option {
+  background-color: gray;
+  color: black;
+  width: 100%;
+}
+
+.LanguagePicker__arrow {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

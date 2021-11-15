@@ -46,15 +46,15 @@ export default function Signup() {
     setMessage(code);
   }
 
-  function setStyle() {
-    document.getElementById("footer").style.background = "#f3f3f3";
-    document.getElementById("footer").style.borderTop = "1px solid #E5E5E5";
-    document.getElementById("header").style.background = "white";
-  }
+  // function setStyle() {
+  //   document.getElementById("footer").style.background = "#f3f3f3";
+  //   document.getElementById("footer").style.borderTop = "1px solid #E5E5E5";
+  //   document.getElementById("header").style.background = "white";
+  // }
 
-  useEffect(() => {
-    setStyle();
-  }, []);
+  // useEffect(() => {
+  //   setStyle();
+  // }, []);
 
   //Components
   const Fields = fields.map((item) => (

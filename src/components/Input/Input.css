@@ -1,0 +1,53 @@
+.Input {
+  height: 100%;
+}
+
+.Input__inputFieldWrapper {
+  position: relative;
+  height: inherit;
+}
+
+.Input__inputField {
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 1rem;
+  width: 100%;
+  height: inherit;
+  border: 0;
+}
+
+.Input__inputField--hasError {
+  border-bottom: 2px solid #e87c03;
+}
+
+.Input__label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #8c8c8c;
+  transition: all 0.1s linear;
+}
+
+.Input__error {
+  margin-top: 5px;
+  padding-left: 5px;
+  color: #e87c03;
+  font-size: 0.8rem;
+}
+
+.Input__inputField:focus {
+  outline: none;
+}
+
+.Input__inputField:focus + .Input__label,
+.Input__inputField:not(:placeholder-shown) + .Input__label {
+  top: 25%;
+  font-weight: 700;
+  font-size: 0.75em;
+}
+
+.Input--dark .Input__inputField {
+  background-color: #333;
+  color: white;
+}

@@ -46,15 +46,15 @@ export default function Login() {
     setMessage(code);
   }
 
-  function setStyle() {
-    document.getElementById("footer").style.background = "";
-    document.getElementById("footer").style.borderTop = "";
-    document.getElementById("header").style.background = "";
-  }
+  // function setStyle() {
+  //   document.getElementById("footer").style.background = "";
+  //   document.getElementById("footer").style.borderTop = "";
+  //   document.getElementById("header").style.background = "";
+  // }
 
-  useEffect(() => {
-    setStyle();
-  }, []);
+  // useEffect(() => {
+  //   setStyle();
+  // }, []);
 
   //Components
   const Fields = fields.map((item, index) => (

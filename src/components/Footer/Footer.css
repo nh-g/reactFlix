@@ -1,0 +1,38 @@
+.Footer {
+  color: #757575;
+  padding: 35px 50px;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.Footer__inner {
+  max-width: 920px;
+  width: 100%;
+  margin: auto;
+}
+
+.Footer__hotline {
+  margin-bottom: 20px;
+}
+
+.Footer__languagePicker {
+  margin-top: 25px;
+  color: #757575;
+  border-color: #333;
+  padding: 8px 0;
+  width: 150px;
+}
+
+.Footer__languagePicker select {
+  font-size: 1rem;
+  padding-left: 40px;
+  font-weight: 700;
+}
+
+.Footer__socialMedia {
+  font-size: 2.2rem;
+}
+
+.Footer__socialMedia > * {
+  margin-right: 16px;
+}
