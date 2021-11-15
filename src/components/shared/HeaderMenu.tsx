@@ -3,7 +3,7 @@ import { useState, useEffect, FC } from "react";
 import { NavLink } from "react-router-dom";
 
 //Local files
-import reactflix from "assets/img/reactflix.png";
+import reactflix from "assets/images/reactflix.png";
 
 import Actions from "./Actions";
 

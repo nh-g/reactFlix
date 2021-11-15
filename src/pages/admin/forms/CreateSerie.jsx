@@ -1,4 +1,4 @@
-import remove from "assets/icns/remove.png";
+import remove from "assets/icon/remove.png";
 export default function CreateSerie({ state, setForm }) {
   //methods
 

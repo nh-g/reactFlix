@@ -2,8 +2,8 @@
 import { FC, useState } from "react";
 
 //Local Files
-import play from "assets/icns/play.png";
-import info from "assets/icns/info.png";
+import play from "assets/icon/play.png";
+import info from "assets/icon/info.png";
 import Modal from "components/modal/Modal";
 import { fixBG, unfixBG } from "scripts/modal";
 import iTitle from "types/iTitle";

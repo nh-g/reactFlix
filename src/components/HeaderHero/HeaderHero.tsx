@@ -1,5 +1,5 @@
-import './HeaderHero.css';
-import bgImage from "assets/img/authBackground.jpg";
+import "./HeaderHero.css";
+import bgImage from "assets/images/authBackground.jpg";
 import {
   Hero,
   Header,
@@ -8,8 +8,8 @@ import {
   Menu,
   RedirectSignupForm,
   Feature,
-} from 'components';
-import { ROUTE_LOGIN } from '../../constants/routes';
+} from "components";
+import { ROUTE_LOGIN } from "../../constants/routes";
 
 const HeaderHero = () => {
   return (

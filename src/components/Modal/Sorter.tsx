@@ -2,7 +2,7 @@
 import { useState, FC } from "react";
 
 //Local Files
-import droparrow from "assets/icns/droparrow.svg";
+import droparrow from "assets/icon/droparrow.svg";
 import iSeason from "types/iSeason";
 
 interface IProps {

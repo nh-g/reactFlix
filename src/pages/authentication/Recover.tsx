@@ -7,7 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 import fields from "./assets/fields-recover.json";
 import InputField from "../../components/shared/InputField";
 import { recover } from "scripts/auth";
-import authPageBackground from "assets/img/authBackground.jpg";
+import authPageBackground from "assets/images/authBackground.jpg";
 
 export default function Recover() {
   //Local states

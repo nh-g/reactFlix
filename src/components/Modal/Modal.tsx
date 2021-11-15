@@ -3,7 +3,7 @@ import reactDom from "react-dom";
 import { useState, FC } from "react";
 
 //Local Files
-import cross from "assets/icns/cross.png";
+import cross from "assets/icon/cross.png";
 import Episodes from "./Episodes";
 import Sorter from "./Sorter";
 import PlayerControlled from "./PlayerControlled";

@@ -3,8 +3,8 @@ import { NavLink, useHistory } from "react-router-dom";
 import { FC } from "react";
 
 //Local Files
-import face from "assets/icns/face.png";
-import droparrow from "assets/icns/droparrow.svg";
+import face from "assets/icon/face.png";
+import droparrow from "assets/icon/droparrow.svg";
 import { useAuth } from "state/AuthProvider";
 import SearchBar from "./SearchBar";
 

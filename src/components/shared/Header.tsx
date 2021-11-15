@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FC } from "react";
 
 //Local files
-import reactflix from "assets/img/reactflix.png";
+import reactflix from "assets/images/reactflix.png";
 
 const Header: FC = () => {
   return (

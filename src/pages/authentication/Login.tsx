@@ -2,7 +2,7 @@
 //NPM Packages
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import authPageBackground from "assets/img/authBackground.jpg";
+import authPageBackground from "assets/images/authBackground.jpg";
 
 //Local imports
 import fields from "./assets/fields-login.json";

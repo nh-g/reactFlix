@@ -3,7 +3,7 @@ import { useState, FC } from "react";
 import { useHistory } from "react-router-dom";
 
 //Local Files
-import loupe from "assets/img/loupe.png";
+import loupe from "assets/images/loupe.png";
 
 const SearchBar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);

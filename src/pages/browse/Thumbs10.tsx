@@ -11,7 +11,7 @@ interface IProps {
 const Thumbs10: FC<IProps> = ({ data }) => {
   const Thumbnails = data.map((item, index) => {
     const imgName = index + 1;
-    const imgPath = require("assets/icns/numbers/" + imgName + ".svg");
+    const imgPath = require("assets/icon/numbers/" + imgName + ".svg");
     return <Thumbs10Item key={index} item={item} imgPath={imgPath} />;
   });
 
