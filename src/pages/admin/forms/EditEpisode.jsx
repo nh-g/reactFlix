@@ -1,5 +1,5 @@
 //Local Files
-import fields from "components/admin/assets/fields-episode.json";
+import fields from "pages/admin/assets/fields-episode.json";
 import InputField from "components/shared/InputField";
 import Player from "components/shared/Player";
 

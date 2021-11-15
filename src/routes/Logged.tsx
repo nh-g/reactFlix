@@ -7,7 +7,7 @@ import Browse from "components/browse";
 import Login from "components/authentication/Login";
 import SignUp from "components/authentication/Signup";
 import HeaderMenu from "components/shared/HeaderMenu";
-import Admin from "components/admin/Admin";
+import Admin from "pages/admin/Admin";
 import Search from "components/search";
 import Category from "components/genre/Category";
 
