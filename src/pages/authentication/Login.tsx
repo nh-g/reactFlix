@@ -10,6 +10,7 @@ import InputField from "components/shared/InputField";
 import { signIn } from "scripts/auth";
 import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
+import Header from "components/Header/Header";
 
 export default function Login() {
   // Global states
@@ -71,6 +72,7 @@ export default function Login() {
   return (
     <>
       <main className="page-login">
+
         <img src={authPageBackground} alt="bg" className="bg" />
 
         <div className="bloc">

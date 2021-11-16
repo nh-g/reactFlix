@@ -3,7 +3,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import { FC } from "react";
 
 //Local Files
-import face from "assets/icon/face.png";
+import avatar from "assets/images/avatar.png";
 import droparrow from "assets/icon/droparrow.svg";
 import { useAuth } from "state/AuthProvider";
 import SearchBar from "./SearchBar";
@@ -19,7 +19,7 @@ const Actions: FC = () => {
       <SearchBar />
 
       <div className="dropdown">
-        <img src={face} alt="" />
+        <img src={avatar} alt="" />
         <img className="drop-arrow" src={droparrow} alt="" />
 
         <div className="caret">
