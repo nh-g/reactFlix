@@ -23,6 +23,7 @@ const Home = (props: Props) => {
             title="Enjoy on your TV."
             animation={<TVAnimation />}
             adjustAnimationMobileMargin
+            titleFontSize="3rem"
           >
             Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
             players, and more.
@@ -35,6 +36,7 @@ const Home = (props: Props) => {
             title="Download your programmes to watch offline."
             animation={<PhoneAnimation />}
             flipped
+            titleFontSize="3rem"
           >
             Save your favorites easily and always have something to watch.
           </Feature>
@@ -42,7 +44,11 @@ const Home = (props: Props) => {
       </div>
       <div className="Home__row">
         <div className="Home__feature">
-          <Feature title="Watch everywhere." animation={<MacAnimation />}>
+          <Feature
+            title="Watch everywhere."
+            animation={<MacAnimation />}
+            titleFontSize="3rem"
+          >
             Stream unlimited movies and TV shows on your phone, tablet, laptop,
             and TV without paying more.
           </Feature>

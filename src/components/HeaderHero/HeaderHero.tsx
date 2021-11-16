@@ -25,7 +25,7 @@ const HeaderHero = () => {
       <div className="HeaderHero__content">
         <Feature
           title="Unlimited films, TV programmes and more."
-          titleFontSize="3rem"
+          // titleFontSize="3rem"
         >
           Watch anywhere. Cancel at any time.
         </Feature>
