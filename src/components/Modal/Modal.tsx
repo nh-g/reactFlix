@@ -39,7 +39,7 @@ const Modal: FC<IProps> = ({ isOpen, onClose, element }) => {
           />
           {/* <div className="gradient" /> disabled : hides the Youtube controls */}
           {titleVisibility && (
-            <div className="bloc">
+            <div className="block">
               {element.logo_url && (
                 <img
                   src={element.logo_url}

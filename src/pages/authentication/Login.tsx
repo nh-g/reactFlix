@@ -1,8 +1,7 @@
 //@ts-nocheck
 //NPM Packages
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import authPageBackground from "assets/images/authBackground.jpg";
 
 //Local imports
 import fields from "./assets/fields-login.json";
@@ -10,7 +9,8 @@ import InputField from "components/shared/InputField";
 import { signIn } from "scripts/auth";
 import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
-import Header from "components/Header/Header";
+import Header from "components/shared/Header";
+import authPageBackground from "assets/images/authBackground.jpg";
 
 export default function Login() {
   // Global states
@@ -47,16 +47,6 @@ export default function Login() {
     setMessage(code);
   }
 
-  // function setStyle() {
-  //   document.getElementById("footer").style.background = "";
-  //   document.getElementById("footer").style.borderTop = "";
-  //   document.getElementById("header").style.background = "";
-  // }
-
-  // useEffect(() => {
-  //   setStyle();
-  // }, []);
-
   //Components
   const Fields = fields.map((item, index) => (
     <div key={index}>
@@ -71,15 +61,17 @@ export default function Login() {
 
   return (
     <>
+      <Header />
       <main className="page-login">
-
         <img src={authPageBackground} alt="bg" className="bg" />
 
-        <div className="bloc">
+        <div className="block">
           <form onSubmit={onSubmit}>
             <h1 className="title">Sign In</h1>
             {Fields}
             <p className="error-firebase">{message}</p>
+
+            <button className="btn-signin">Sign In</button>
 
             <div className="remember-recover">
               <label className="remember">
@@ -94,12 +86,10 @@ export default function Login() {
                 Need help?
               </Link>
             </div>
-
-            <button className="btn-signin">Sign In</button>
           </form>
 
           <p className="optional-action">
-            New to reactflix ?&nbsp;
+            New to ReactFlix ?&nbsp;
             <Link to="/signup">
               <strong>Sign up now.</strong>
             </Link>

@@ -60,7 +60,7 @@ export default function Recover() {
     <main className="page-login recover">
       <img src={authPageBackground} alt="bg" className="bg" />
       <div className="logo">reactflix</div>
-      <div className="bloc">
+      <div className="block">
         <form onSubmit={onSubmit}>
           {Fields}
           <p>{message}</p>

@@ -9,6 +9,7 @@ import InputField from "../../components/shared/InputField";
 import { createAccount } from "scripts/auth";
 import { useAuth } from "state/AuthProvider";
 import { createDocumentWithId } from "scripts/fireStore";
+import Header from "components/shared/Header";
 
 export default function Signup() {
   //Local states
@@ -45,17 +46,15 @@ export default function Signup() {
   function onFailure(code) {
     setMessage(code);
   }
+  function setStyle() {
+    document.getElementById("footer").style.background = "#f3f3f3";
+    document.getElementById("footer").style.borderTop = "1px solid #E5E5E5";
+    document.getElementById("header").style.background = "white";
+  }
 
-  // function setStyle() {
-  //   document.getElementById("footer").style.background = "#f3f3f3";
-  //   document.getElementById("footer").style.borderTop = "1px solid #E5E5E5";
-  //   document.getElementById("header").style.background = "white";
-  // }
-
-  // useEffect(() => {
-  //   setStyle();
-  // }, []);
-
+  useEffect(() => {
+    setStyle();
+  }, []);
   //Components
   const Fields = fields.map((item) => (
     <InputField
@@ -68,12 +67,14 @@ export default function Signup() {
 
   return (
     <>
-      <Link to="/" className="signin">
+      <Header />
+
+      <Link to="/login" className="signin">
         <strong>Sign In</strong>
       </Link>
 
       <main className="page-signup ">
-        <div className="bloc">
+        <div className="block">
           <form onSubmit={onSubmit}>
             <h1 className="title">Sign Up</h1>
             <h2>Just a few more steps and you're finished!</h2>

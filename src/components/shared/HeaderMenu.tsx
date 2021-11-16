@@ -1,18 +1,17 @@
 //NPM Packages
-import { useState, useEffect, FC } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 //Local files
-import reactflix from "assets/images/reactflix.png";
-
+import Logo from "assets/images/reactflix.png";
 import Actions from "./Actions";
 
-const HeaderMenu: FC = () => {
+const HeaderMenu = () => {
   // Local state
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showBackground, setShowBackground] = useState(0);
 
   //Methods
-  const handleScroll = () => setScrollPosition(window.pageYOffset);
+  const handleScroll = () => setShowBackground(window.pageYOffset);
   // Hook
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -21,11 +20,11 @@ const HeaderMenu: FC = () => {
 
   return (
     <header
-      className={scrollPosition === 0 ? "header-menu" : "header-menu black"}
+      className={showBackground === 0 ? "header-menu" : "header-menu black"}
     >
-      <div className="bloc">
-        <NavLink to="/" className="home">
-          <img src={reactflix} alt="Home" />
+      <div className="block">
+        <NavLink to="/browse" className="browse">
+          <img src={Logo} alt="Home" />
         </NavLink>
 
         <nav>

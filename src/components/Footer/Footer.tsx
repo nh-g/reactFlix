@@ -29,7 +29,7 @@ const Footer: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
   ...props
 }) => {
   return (
-    <footer className={mergeClassNames("Footer", props.className)}>
+    <footer id = "footer" className={mergeClassNames("Footer", props.className)}>
       <div className="Footer__inner">
         {showSocialMediaIcons && (
           <div className="Footer__socialMedia">
