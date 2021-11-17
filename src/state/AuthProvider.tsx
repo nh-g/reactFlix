@@ -3,6 +3,10 @@ import { createContext, useState, useContext } from "react";
 import iUser from "types/iUser";
 
 const AuthContext = createContext({
+  user: {
+    username: "",
+    role: "",
+  },
   setLoggedIn: (status: boolean) => status,
   loggedIn: false,
   setUser: (newUser: any) => newUser,
