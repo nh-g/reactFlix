@@ -8,6 +8,7 @@ import fields from "./assets/fields-recover.json";
 import InputField from "../../components/shared/InputField";
 import { recover } from "scripts/auth";
 import authPageBackground from "assets/images/authBackground.jpg";
+import Header from "components/shared/Header";
 
 export default function Recover() {
   //Local states
@@ -37,15 +38,14 @@ export default function Recover() {
     setMessage(errorMessage);
   }
 
-  // function setStyle() {
-  //   document.getElementById("footer").style.background = "";
-  //   document.getElementById("footer").style.borderTop = "";
-  //   document.getElementById("header").style.background = "";
-  // }
+  function setStyle() {
+    document.getElementById("footer").style.background = "";
+    document.getElementById("footer").style.borderTop = "";
+  }
 
-  // useEffect(() => {
-  //   setStyle();
-  // }, []);
+  useEffect(() => {
+    setStyle();
+  }, []);
 
   //Components
   const Fields = fields.map((item) => (
@@ -57,24 +57,28 @@ export default function Recover() {
     />
   ));
   return (
-    <main className="page-login recover">
-      <img src={authPageBackground} alt="bg" className="bg" />
-      <div className="logo">reactflix</div>
-      <div className="block">
-        <form onSubmit={onSubmit}>
-          {Fields}
-          <p>{message}</p>
-          <button className="btn-signin">
-            <h4>Recover Password</h4>
-          </button>
-        </form>
-        <p className="optional-action">
-          New to reactflix ?&nbsp;
-          <Link to="/signup">
-            <strong>Sign up now.</strong>
-          </Link>
-        </p>
-      </div>
-    </main>
+    <>
+      <Header />
+
+      <main className="page-login recover">
+        <img src={authPageBackground} alt="bg" className="bg" />
+        <div className="logo">reactflix</div>
+        <div className="block">
+          <form onSubmit={onSubmit}>
+            {Fields}
+            <p>{message}</p>
+            <button className="btn-signin">
+              <h4>Recover Password</h4>
+            </button>
+          </form>
+          <p className="optional-action">
+            New to reactflix ?&nbsp;
+            <Link to="/signup">
+              <strong>Sign up now.</strong>
+            </Link>
+          </p>
+        </div>
+      </main>
+    </>
   );
 }

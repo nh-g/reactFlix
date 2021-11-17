@@ -1,6 +1,6 @@
 //@ts-nocheck
 //NPM Packages
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 //Local imports
@@ -46,6 +46,15 @@ export default function Login() {
   function onFailure(code) {
     setMessage(code);
   }
+
+  function setStyle() {
+    document.getElementById("footer").style.background = "";
+    document.getElementById("footer").style.borderTop = "";
+  }
+
+  useEffect(() => {
+    setStyle();
+  }, []);
 
   //Components
   const Fields = fields.map((item, index) => (

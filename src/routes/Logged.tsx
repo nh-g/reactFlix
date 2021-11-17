@@ -22,7 +22,7 @@ export default function Logged() {
       <Route component={SignUp} path="/signup" />
       <Route component={Search} exact path="/search/" />
       <Route component={Search} path="/search/:query" />
-      <Route component={Genre} path="/category/:category" />
+      <Route component={Genre} path="/genre/:genreName" />
       {user.role === "admin" && <Route component={Admin} path="/admin" />}
     </>
   );

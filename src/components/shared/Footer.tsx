@@ -1,8 +1,5 @@
-//NPM Packages
-import { FC } from "react";
-
-const Footer: FC = () => {
-  //Const
+export default function Footer() {
+  // Constants
   const links = [
     "FAQ",
     "Investor Relations",
@@ -11,7 +8,7 @@ const Footer: FC = () => {
     "Cookie Preferences",
     "Corporate Information",
   ];
-  //Components
+  // Components
   const Links = links.map((item, index) => (
     <li key={index}>
       <p>{item}</p>
@@ -19,14 +16,13 @@ const Footer: FC = () => {
   ));
 
   return (
-    <footer id="footer">
+    <footer id="footer" >
       <div className="container">
         <h3>Questions? Call 020-79 06 35</h3>
         <ul>{Links}</ul>
-        <span>© 2021 • Giang N.H</span>
+        <span> Netflix Clone © 2021 • Giang N.H.</span>
       </div>
     </footer>
   );
 };
 
-export default Footer;

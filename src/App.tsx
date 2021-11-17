@@ -10,8 +10,7 @@ import { getDocument } from "scripts/fireStore";
 import Logged from "routes/Logged";
 import Unlogged from "routes/Unlogged";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import footerLinks from "data/home-footer-links.json";
-import {Footer} from "components";
+import Footer from "components/shared/Footer";
 
 export default function App() {
   // Global state
@@ -35,7 +34,7 @@ export default function App() {
   );
 
   useEffect(() => fetchUser("users"), [fetchUser]);
-  // forceRefresh={true} on BrowserRouter to try
+  
   return (
     <div className="App">
       {status === 0 && <Spinner />}
@@ -43,18 +42,7 @@ export default function App() {
       {status === 1 && (
         <BrowserRouter>
           <Switch>{loggedIn ? <Logged /> : <Unlogged />}</Switch>
-          <div className="Home__row">
-            <Footer
-              className="Home__footer"
-              menuLinks={footerLinks}
-              showHotlineNumber
-              showLanguagePicker
-            >
-              <div className="Home__footerSiteName">
-                Netflix Clone © 2021 • Giang N.H.
-              </div>
-            </Footer>
-          </div>
+          <Footer/>
         </BrowserRouter>
       )}
     </div>

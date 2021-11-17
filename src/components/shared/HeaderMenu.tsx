@@ -31,13 +31,13 @@ const HeaderMenu = () => {
           <NavLink to="/browse" className="nav-item">
             Home
           </NavLink>
-          <NavLink to="/category/serie" className="nav-item">
+          <NavLink to="/genre/serie" className="nav-item">
             Series
-          </NavLink>{" "}
-          <NavLink to="/category/film" className="nav-item">
+          </NavLink>
+          <NavLink to="/genre/film" className="nav-item">
             Films
           </NavLink>
-          <NavLink to="/category/documentary" className="nav-item">
+          <NavLink to="/genre/documentary" className="nav-item">
             Documentaries
           </NavLink>
         </nav>

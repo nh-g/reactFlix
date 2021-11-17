@@ -19,8 +19,8 @@ const Genre: FC = () => {
 
   //Local states
   //@ts-ignore
-  const { category } = useParams();
-  const categoryTitles = getCategory(titles.data, category);
+  const { genreName } = useParams();
+  const categoryTitles = getCategory(titles.data, genreName);
 
   const randomIndex = Math.floor(Math.random() * categoryTitles.length);
   const randomTitle = categoryTitles[randomIndex];
@@ -45,7 +45,7 @@ const Genre: FC = () => {
       {(!titles.loading && titles.error) === null && (
         <>
           <div className="hero-bg">
-            <div className="category-heading">{getHeading(category)}</div>
+            <div className="category-heading">{getHeading(genreName)}</div>
             <Player video={randomTitle.trailer} autoplay="0" controls="0" />
             <div className="gradient" />
           </div>
@@ -55,7 +55,7 @@ const Genre: FC = () => {
             {categoryTitles.length === 0 && <h1>No titles found ... </h1>}
             {categoryTitles.length > 0 && (
               <ThumbnailsGenre data={categoryTitles}>
-                {getHeading(category)}
+                {getHeading(genreName)}
               </ThumbnailsGenre>
             )}
           </main>

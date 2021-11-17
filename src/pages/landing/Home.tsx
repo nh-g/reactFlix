@@ -1,3 +1,7 @@
+//@ts-nocheck
+
+import { useEffect } from "react";
+
 import "./Home.css";
 import footerLinks from "../../data/home-footer-links.json";
 import {
@@ -11,9 +15,15 @@ import {
   TVAnimation,
 } from "components";
 
-interface Props {}
+export default function Home() {
+  // function setStyle() {
+  //   document.getElementById("footer").style.display = "none";
+  // }
 
-const Home = (props: Props) => {
+  // useEffect(() => {
+  //   setStyle();
+  // }, []);
+
   return (
     <div className="Home">
       <HeaderHero />
@@ -62,8 +72,18 @@ const Home = (props: Props) => {
           </div>
         </div>
       </div>
+      <div className="Home__row" id="bigFooter">
+        <Footer
+          className="Home__footer"
+          menuLinks={footerLinks}
+          showHotlineNumber
+          showLanguagePicker
+        >
+          <div className="Home__footerSiteName">
+            Netflix Clone © 2021 • Giang N.H.
+          </div>
+        </Footer>
+      </div>
     </div>
   );
-};
-
-export default Home;
+}
