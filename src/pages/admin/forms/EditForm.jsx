@@ -1,15 +1,14 @@
-//NPM Packages
+// NPM packages
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-//Local imports
+// Project files
 import fields from "../assets/fields-edit.json";
 import InputField from "components/shared/InputField";
 import { updateDocument, deleteDocument } from "scripts/fireStore";
 import { getCategory } from "scripts/methods";
 import EditSerie from "./EditSerie";
 import Select from "./Select";
-import { useTitles } from "state/TitlesProvider";
 
 export default function EditForm({ data }) {
   //Local states
@@ -18,7 +17,6 @@ export default function EditForm({ data }) {
   const [formVisibility, setFormVisibility] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
-  //const { dispatch } = useTitles();
 
   const items = getCategory(data, item.category);
 
@@ -36,7 +34,6 @@ export default function EditForm({ data }) {
       e.preventDefault();
       setErrorMessage("");
       await updateDocument("title_test", form.id, form);
-      //dispatch({ type: "UPDATE_TITLE", payload: form });
 
       alert("Title successfully edited");
       history.push("/admin");

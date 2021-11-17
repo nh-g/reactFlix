@@ -1,18 +1,16 @@
-//NPM Packages
+// NPM packages
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-//Local files
+// Project files
 import Logo from "assets/images/reactflix.png";
 import Actions from "./Actions";
 
-const HeaderMenu = () => {
-  // Local state
+const NavBar = () => {
   const [showBackground, setShowBackground] = useState(0);
 
-  //Methods
   const handleScroll = () => setShowBackground(window.pageYOffset);
-  // Hook
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -46,4 +44,4 @@ const HeaderMenu = () => {
     </header>
   );
 };
-export default HeaderMenu;
+export default NavBar;
