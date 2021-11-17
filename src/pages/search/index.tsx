@@ -1,19 +1,18 @@
 //NPM Packages
 import { useParams } from "react-router-dom";
-import { FC } from "react";
 
 //Local Files
+import useFetch from "hooks/useFetch";
 import { searchTitle } from "scripts/methods";
 import { useTitles } from "state/TitlesProvider";
-import useFetch from "hooks/useFetch";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import ThumbnailsGenre from "../genre/ThumbnailsGenre";
 
-const Search: FC = () => {
+export default function Search() {
   // Global state
   //@ts-ignore
-  const { dispatchTitles } = useTitles();
-  const titles = useFetch("title_test", dispatchTitles);
+  const { dispatch } = useTitles();
+  const titles = useFetch("title_test", dispatch);
 
   //Local states
   //@ts-ignore
@@ -36,4 +35,3 @@ const Search: FC = () => {
     </>
   );
 };
-export default Search;

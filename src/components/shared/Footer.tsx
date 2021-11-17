@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="container">
         <h3>Questions? Call 020-79 06 35</h3>
         <ul>{Links}</ul>
-        <span> Netflix Clone © 2021 • Giang N.H.</span>
+        <span> Netflix Clone © 2021 • giangngohong@gmail.com</span>
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@ export default function EditForm({ data }) {
   const [formVisibility, setFormVisibility] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
-  //const { dispatchTitles } = useTitles();
+  //const { dispatch } = useTitles();
 
   const items = getCategory(data, item.category);
 
@@ -36,7 +36,7 @@ export default function EditForm({ data }) {
       e.preventDefault();
       setErrorMessage("");
       await updateDocument("title_test", form.id, form);
-      //dispatchTitles({ type: "UPDATE_TITLE", payload: form });
+      //dispatch({ type: "UPDATE_TITLE", payload: form });
 
       alert("Title successfully edited");
       history.push("/admin");

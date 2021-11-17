@@ -8,12 +8,13 @@ import EditForm from "./forms/EditForm";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import useFetch from "hooks/useFetch";
+import Footer from "components/shared/Footer";
 
 const Admin: FC = () => {
   // Global state
   //@ts-ignore
-  const { dispatchTitles } = useTitles();
-  const titles = useFetch("title_test", dispatchTitles);
+  const { dispatch } = useTitles();
+  const titles = useFetch("title_test", dispatch);
 
   //Local states
   const [selection, setSelection] = useState("edit");
@@ -30,6 +31,7 @@ const Admin: FC = () => {
           {selection === "edit" && <EditForm data={titles.data} />}
         </main>
       )}
+      <Footer />
     </>
   );
 };

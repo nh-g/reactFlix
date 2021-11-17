@@ -1,7 +1,4 @@
-//NPM Packages
-import { FC } from "react";
-
-//Local imports
+// Project files
 import useFetch from "hooks/useFetch";
 import Thumbs from "components/shared/Thumbs";
 import Thumbs10 from "pages/browse/Thumbs10";
@@ -11,12 +8,13 @@ import { getCategory, getTop10 } from "scripts/methods";
 import Player from "components/shared/Player";
 import Hero from "components/shared/Hero";
 import iTitle from "types/iTitle";
+import footerLinks from "data/home-footer-links.json";
+import { Footer } from "components";
 
-const Browse: FC = () => {
+export default function Browse() {
   // Global state
-  //@ts-ignore
-  const { dispatchTitles } = useTitles();
-  const titles = useFetch("title_test", dispatchTitles);
+  const { dispatch } = useTitles();
+  const titles = useFetch("title_test", dispatch);
 
   //Local states
   const autoplay = "0"; //Change to "1" here  to have video background running in production
@@ -49,9 +47,21 @@ const Browse: FC = () => {
             <Thumbs data={documentaries}>Documentaries</Thumbs>
             <Thumbs10 data={top10} />
           </main>
+
+          <div className="Home__row" id="bigFooter">
+            <Footer
+              className="Home__footer"
+              menuLinks={footerLinks}
+              showHotlineNumber
+              showLanguagePicker
+            >
+              <div className="Home__footerSiteName">
+                Netflix Clone © 2021 • giangngohong@gmail.com
+              </div>
+            </Footer>
+          </div>
         </>
       )}
     </>
   );
-};
-export default Browse;
+}

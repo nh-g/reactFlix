@@ -1,16 +1,31 @@
-//@ts-nocheck
-import { createContext, useReducer, useContext } from "react";
-//Project files
+// NPM packages
+import { createContext, useReducer, useContext, ReactNode } from "react";
+
+// Project files
 import titlesReducer from "state/titlesReducer";
+import iTitle from "types/iTitle";
 
-const TitlesContext = createContext(null);
+interface iContext {
+  titles: iTitle[] ;
+  dispatch: Function;
+}
+interface iProp {
+  children: ReactNode;
+}
 
-export function TitlesProvider({ children }) {
+const initialState: iTitle[] = [];
+
+const TitlesContext = createContext<iContext>({
+  titles: initialState,
+  dispatch: () => console.warn("CourseContext used outside provider"),
+});
+
+export function TitlesProvider({ children }: iProp) {
   // Local state
-  const [titles, dispatchTitles] = useReducer(titlesReducer, []);
+  const [titles, dispatch] = useReducer(titlesReducer, []);
 
   return (
-    <TitlesContext.Provider value={{ titles, dispatchTitles }}>
+    <TitlesContext.Provider value={{ titles, dispatch }}>
       {children}
     </TitlesContext.Provider>
   );

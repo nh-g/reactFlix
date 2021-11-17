@@ -1,32 +1,32 @@
-//NPM Packages
+// NPM packages
 import { useParams } from "react-router-dom";
-import { FC } from "react";
 
-//Local Files
-import { useTitles } from "state/TitlesProvider";
+// Project Files
 import useFetch from "hooks/useFetch";
+import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import ThumbnailsGenre from "./ThumbnailsGenre";
 import Player from "components/shared/Player";
 import { getCategory } from "scripts/methods";
 import Hero from "../../components/shared/Hero";
 
-const Genre: FC = () => {
+interface iProps {
+  genreName: string;
+}
+export default function Genre(){
   // Global state
-  //@ts-ignore
-  const { dispatchTitles } = useTitles();
-  const titles = useFetch("title_test", dispatchTitles);
+  const { dispatch } = useTitles();
+  const titles = useFetch("title_test", dispatch);
 
-  //Local states
-  //@ts-ignore
-  const { genreName } = useParams();
+  // Local states
+  const { genreName } = useParams<iProps>();
   const categoryTitles = getCategory(titles.data, genreName);
 
   const randomIndex = Math.floor(Math.random() * categoryTitles.length);
   const randomTitle = categoryTitles[randomIndex];
 
-  function getHeading(cat: string): string {
-    switch (cat) {
+  function getHeading(genre: string): string {
+    switch (genre) {
       case "film":
         return "Films";
       case "serie":
@@ -64,4 +64,3 @@ const Genre: FC = () => {
     </>
   );
 };
-export default Genre;

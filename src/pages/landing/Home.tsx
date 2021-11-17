@@ -1,7 +1,4 @@
-//@ts-nocheck
-
-import { useEffect } from "react";
-
+// Project files
 import "./Home.css";
 import footerLinks from "../../data/home-footer-links.json";
 import {
@@ -16,13 +13,6 @@ import {
 } from "components";
 
 export default function Home() {
-  // function setStyle() {
-  //   document.getElementById("footer").style.display = "none";
-  // }
-
-  // useEffect(() => {
-  //   setStyle();
-  // }, [setStyle]);
 
   return (
     <div className="Home">
@@ -80,7 +70,7 @@ export default function Home() {
           showLanguagePicker
         >
           <div className="Home__footerSiteName">
-            Netflix Clone © 2021 • Giang N.H.
+            Netflix Clone © 2021 • giangngohong@gmail.com
           </div>
         </Footer>
       </div>
