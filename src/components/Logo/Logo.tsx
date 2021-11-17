@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTE_BROWSE, ROUTE_HOME } from "../../constants/routes";
 import { useAuth } from 'state/AuthProvider';

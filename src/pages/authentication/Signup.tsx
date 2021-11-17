@@ -10,6 +10,7 @@ import { createAccount } from "scripts/auth";
 import { useAuth } from "state/AuthProvider";
 import { createDocumentWithId } from "scripts/fireStore";
 import Header from "components/shared/Header";
+import Footer from "components/shared/Footer";
 
 export default function Signup() {
   //Local states
@@ -84,6 +85,7 @@ export default function Signup() {
           </form>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

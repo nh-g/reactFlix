@@ -5,10 +5,10 @@ import {
   AiOutlineInstagram,
   AiOutlineTwitter,
 } from 'react-icons/ai';
-import { GridMenu } from '..';
+import { GridMenu } from '../../../components';
 import { MenuLink } from 'types/landing/types';
-import mergeClassNames from '../../utils/merge-class-names';
-import LanguagePicker from '../LanguagePicker/LanguagePicker';
+import mergeClassNames from '../../../utils/merge-class-names';
+import LanguagePicker from '../../../components/LanguagePicker/LanguagePicker';
 import './Footer.css';
 
 interface Props {

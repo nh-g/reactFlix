@@ -17,6 +17,7 @@ export default function UnLogged() {
   return (
     <>
       <Route exact path={ROUTE_HOME} component={LandingPage} />
+
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
       <Route path={ROUTE_RESET} component={Reset} />

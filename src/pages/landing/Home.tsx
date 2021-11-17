@@ -22,7 +22,7 @@ export default function Home() {
 
   // useEffect(() => {
   //   setStyle();
-  // }, []);
+  // }, [setStyle]);
 
   return (
     <div className="Home">

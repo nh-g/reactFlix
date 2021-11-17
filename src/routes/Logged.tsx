@@ -19,6 +19,7 @@ import HeaderMenu from "components/shared/HeaderMenu";
 import Admin from "pages/admin/Admin";
 import Search from "pages/search";
 import Genre from "pages/genre";
+import Footer from "components/shared/Footer";
 
 export default function Logged() {
   const { user } = useAuth();
@@ -36,6 +37,7 @@ export default function Logged() {
 
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
+
 
       {/* <Route exact path="/browse" component={Browse} /> */}
       {/* <Route component={Login} path="/login" />

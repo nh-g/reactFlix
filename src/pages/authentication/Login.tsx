@@ -11,6 +11,7 @@ import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import Header from "components/shared/Header";
 import authPageBackground from "assets/images/authBackground.jpg";
+import Footer from "components/shared/Footer";
 
 export default function Login() {
   // Global states
@@ -105,6 +106,7 @@ export default function Login() {
           </p>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

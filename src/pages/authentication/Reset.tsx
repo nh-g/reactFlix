@@ -1,51 +1,42 @@
-//@ts-nocheck
-//NPM Packages
-import { useState, useEffect } from "react";
+// NPM packages
+import { useState, FormEvent } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-//Local imports
+// Project files
 import fields from "./assets/fields-recover.json";
 import InputField from "../../components/shared/InputField";
 import { recover } from "scripts/auth";
 import authPageBackground from "assets/images/authBackground.jpg";
 import Header from "components/shared/Header";
+import Footer from "components/shared/Footer";
 
 export default function Reset() {
   //Local states
-  const [form, setForm] = useState({ email: "" });
+  const [form, setForm] = useState<any>({ email: "" });
   const [message, setMessage] = useState("");
   const history = useHistory();
 
   // Methods
-  function onChange(key, value) {
+  function onChange(key: string, value: any) {
     const field = { [key]: value };
     setForm({ ...form, ...field });
   }
 
-  async function onSubmit(e) {
-    e.preventDefault();
+  async function onSubmit(event: FormEvent) {
+    event.preventDefault();
     setMessage("");
     const account = await recover(form.email);
     account.isReset ? onSuccess(account.payload) : onFailure(account.payload);
   }
 
-  async function onSuccess(message) {
+  async function onSuccess(message: string) {
     setMessage(message);
     history.push("/");
   }
 
-  function onFailure(errorMessage) {
+  function onFailure(errorMessage: string) {
     setMessage(errorMessage);
   }
-
-  function setStyle() {
-    document.getElementById("footer").style.background = "";
-    document.getElementById("footer").style.borderTop = "";
-  }
-
-  useEffect(() => {
-    setStyle();
-  }, []);
 
   //Components
   const Fields = fields.map((item) => (
@@ -79,6 +70,7 @@ export default function Reset() {
           </p>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
