@@ -9,6 +9,7 @@ import ThumbnailsGenre from "./ThumbnailsGenre";
 import Player from "components/shared/Player";
 import { getCategory } from "scripts/methods";
 import Hero from "../../components/shared/Hero";
+import Footer from "components/shared/Footer";
 
 interface iProps {
   genreName: string;
@@ -59,6 +60,7 @@ export default function Genre(){
               </ThumbnailsGenre>
             )}
           </main>
+          <Footer />
         </>
       )}
     </>

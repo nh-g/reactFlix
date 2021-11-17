@@ -9,13 +9,12 @@ import { getDocument } from "scripts/fireStore";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import UnLogged from "routes/Unlogged";
 import Logged from "routes/Logged";
-import Footer from "components/shared/Footer";
 
 export default function App() {
   // Global state
   const { loggedIn, setLoggedIn, setUser } = useAuth();
 
-  //Local state
+  // Local state
   const [status, setStatus] = useState(0); // 0 loading, 1 loaded, 2 error
 
   // Methods
@@ -43,7 +42,6 @@ export default function App() {
       {status === 1 && (
         <BrowserRouter>
           <Switch>{loggedIn ? <Logged /> : <UnLogged />}</Switch>
-          {/* <Footer /> */}
         </BrowserRouter>
       )}
     </div>

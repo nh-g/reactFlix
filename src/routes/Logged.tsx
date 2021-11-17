@@ -30,14 +30,13 @@ export default function Logged() {
       {/* <Route component={Login} path="/login" /> */}
       {user.role === "admin" && <Route path={ROUTE_ADMIN} component={Admin} />}
 
-      <Route exact path={ROUTE_BROWSE} component={Browse} />
+      <Route path={ROUTE_BROWSE} component={Browse} />
 
-      <Route component={Search} path={`${ROUTE_SEARCH}/:query`} />
-      <Route component={Genre} path={`${ROUTE_FILTER}/:genreName`} />
+      <Route path={`${ROUTE_SEARCH}/:query`} component={Search} />
+      <Route path={`${ROUTE_FILTER}/:genreName`} component={Genre} />
 
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
-
 
       {/* <Route exact path="/browse" component={Browse} /> */}
       {/* <Route component={Login} path="/login" />

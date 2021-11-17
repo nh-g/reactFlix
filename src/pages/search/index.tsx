@@ -1,22 +1,25 @@
-//NPM Packages
+// NPM packages
 import { useParams } from "react-router-dom";
 
-//Local Files
+// Project files
 import useFetch from "hooks/useFetch";
 import { searchTitle } from "scripts/methods";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import ThumbnailsGenre from "../genre/ThumbnailsGenre";
+import Footer from "components/shared/Footer";
+
+interface iProps {
+  query: any;
+}
 
 export default function Search() {
   // Global state
-  //@ts-ignore
   const { dispatch } = useTitles();
   const titles = useFetch("title_test", dispatch);
 
   //Local states
-  //@ts-ignore
-  const { query } = useParams();
+  const { query } = useParams < iProps>();
   const results = searchTitle(titles.data, query);
 
   return (
@@ -32,6 +35,7 @@ export default function Search() {
           )}
         </main>
       )}
+      <Footer />
     </>
   );
 };
