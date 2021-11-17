@@ -1,14 +1,13 @@
-//NPM Packages
-import { FC } from "react";
+// NPM packages
 import getYouTubeID from "get-youtube-id";
 
-interface IProps {
+interface iProps {
   video: string;
   autoplay: string;
   controls: string;
 }
 
-const Player: FC<IProps> = ({ video, autoplay, controls }) => {
+export default function Player({ video, autoplay, controls } : iProps) {
   const videoId = getYouTubeID(video);
 
   return (
@@ -25,4 +24,3 @@ const Player: FC<IProps> = ({ video, autoplay, controls }) => {
     </div>
   );
 };
-export default Player;

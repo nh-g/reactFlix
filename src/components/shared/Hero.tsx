@@ -1,7 +1,7 @@
-//NPM Packages
+// NPM packages
 import { FC, useState } from "react";
 
-//Local Files
+// Project files
 import play from "assets/icon/play.png";
 import info from "assets/icon/info.png";
 import Modal from "components/modal/Modal";
@@ -30,7 +30,7 @@ const Hero: FC<IProps> = ({ data }) => {
     <>
       <Modal element={data} isOpen={isModalOpen} onClose={closeModal} />
 
-      <section className="bloc-title">
+      <section className="block-title">
         {data.logo_url ? (
           <img src={data.logo_url} alt="" className="title-illustration" />
         ) : (

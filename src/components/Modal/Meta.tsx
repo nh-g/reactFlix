@@ -1,25 +1,27 @@
-//NPM Packages
-import { FC } from "react";
-
-//Local Files
+// Project files
 import iTitle from "types/iTitle";
 import Lister from "./Lister";
 
-interface IProps {
+interface iProps {
   element: iTitle;
 }
 
-const Meta: FC<IProps> = ({ element }) => {
-  const mockMatch = Math.floor(Math.random() * (100 - 80) + 80);
+export default function Meta ({ element }: iProps) {
+  // const mockMatchRate = Math.floor(Math.random() * (100 - 70) + 70);
   return (
     <section className="meta">
       <div className="details">
-        <p className="match">{mockMatch}% Match</p>
-        <p className="year">{element.year}</p>
+        {/* <p className="match">{mockMatchRate}% Match </p>
+        <span> | </span> */}
+
+        <p className="year">{element.year} </p>
+        <span> | </span>
+
         <p className="public">
           {element.advised_public ? element.advised_public : "13+"}
         </p>
-        <p className="duration">{element.duration}</p>
+        <span> | </span>
+        <p className="duration">{element.duration} </p>
       </div>
 
       <p className="description">{element.description}</p>
@@ -29,4 +31,3 @@ const Meta: FC<IProps> = ({ element }) => {
     </section>
   );
 };
-export default Meta;
