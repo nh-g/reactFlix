@@ -91,7 +91,7 @@ export default function Login() {
                 />
                 <p>Remember me</p>
               </label>
-              <Link to="/recover" className="help">
+              <Link to="/reset" className="help">
                 Need help?
               </Link>
             </div>

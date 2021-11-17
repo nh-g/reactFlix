@@ -1,24 +1,25 @@
-//@ts-nocheck
+// NPM packages
 import { Route } from "react-router-dom";
 
 // Project files
+import {
+  ROUTE_HOME,
+  ROUTE_LOGIN,
+  ROUTE_SIGNUP,
+  ROUTE_RESET,
+} from "constants/routes";
 import Login from "pages/authentication/Login";
 import SignUp from "pages/authentication/Signup";
-import Recover from "pages/authentication/Recover";
-import Header from "components/shared/Header";
-import LandingPage from  "pages/landing/Home"
-import Logo from "components/Logo/Logo"
-// import { Header } from "components";
-export default function Unlogged() {
+import Reset from "pages/authentication/Reset";
+import LandingPage from "pages/landing/Home";
+
+export default function UnLogged() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <Logo/> */}
-      <Route component={LandingPage} exact path="/" />
-      <Route component={Login} path="/login" />
-      <Route component={SignUp} path="/signup" />
-      <Route component={Recover} path="/recover" />
-
+      <Route exact path={ROUTE_HOME} component={LandingPage} />
+      <Route path={ROUTE_LOGIN} component={Login} />
+      <Route path={ROUTE_SIGNUP} component={SignUp} />
+      <Route path={ROUTE_RESET} component={Reset} />
     </>
   );
 }

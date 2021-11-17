@@ -10,7 +10,7 @@ import { recover } from "scripts/auth";
 import authPageBackground from "assets/images/authBackground.jpg";
 import Header from "components/shared/Header";
 
-export default function Recover() {
+export default function Reset() {
   //Local states
   const [form, setForm] = useState({ email: "" });
   const [message, setMessage] = useState("");

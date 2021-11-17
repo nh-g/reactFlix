@@ -1,19 +1,29 @@
-//@ts-nocheck
-import React, { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext } from "react";
 
-const AuthContext = createContext(null);
+import iUser from "types/iUser";
 
-export function AuthProvider({ children }) {
-  // Local state
-  const [user, setUser] = useState({});
+const AuthContext = createContext({
+  setLoggedIn: (status: boolean) => status,
+  loggedIn: false,
+  setUser: (newUser: any) => newUser,
+});
+
+export const AuthProvider: React.FC = ({ children }) => {
+  
+  const [user, setUser] = useState<iUser | undefined>({
+    username: "",
+    role: "",
+  });
+
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
+    //@ts-ignore
     <AuthContext.Provider value={{ user, setUser, loggedIn, setLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );
-}
+};
 
 export function useAuth() {
   return useContext(AuthContext);

@@ -1,15 +1,14 @@
-//@ts-nocheck
-//NPM Packages
+// NPM packages
 import { useState, useCallback, useEffect } from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 
-//Local Files
+// Project files
 import "styles/base.sass";
 import { useAuth } from "state/AuthProvider";
 import { getDocument } from "scripts/fireStore";
-import Logged from "routes/Logged";
-import Unlogged from "routes/Unlogged";
 import { BoxError, Spinner } from "components/shared/FetchItems";
+import UnLogged from "routes/Unlogged";
+import Logged from "routes/Logged";
 import Footer from "components/shared/Footer";
 
 export default function App() {
@@ -17,7 +16,7 @@ export default function App() {
   const { loggedIn, setLoggedIn, setUser } = useAuth();
 
   //Local state
-  const [status, setStatus] = useState(0); // 0 loading, 1 ready, 2 error
+  const [status, setStatus] = useState(0); // 0 loading, 1 loaded, 2 error
 
   // Methods
   const fetchUser = useCallback(
@@ -33,16 +32,18 @@ export default function App() {
     [setUser, setLoggedIn]
   );
 
-  useEffect(() => fetchUser("users"), [fetchUser]);
-  
+  useEffect(() => {
+    fetchUser("users");
+  }, [fetchUser]);
+
   return (
     <div className="App">
       {status === 0 && <Spinner />}
       {status === 2 && <BoxError />}
       {status === 1 && (
         <BrowserRouter>
-          <Switch>{loggedIn ? <Logged /> : <Unlogged />}</Switch>
-          <Footer/>
+          <Switch>{loggedIn ? <Logged /> : <UnLogged />}</Switch>
+          <Footer />
         </BrowserRouter>
       )}
     </div>
