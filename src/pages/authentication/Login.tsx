@@ -1,8 +1,8 @@
-//NPM Packages
+// NPM Packages
 import { useState, useEffect, FormEvent } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-//Local imports
+// Project files
 import fields from "./assets/fields-login.json";
 import InputField from "components/shared/InputField";
 import { signIn } from "scripts/auth";
@@ -47,13 +47,13 @@ export default function Login() {
     setMessage(code);
   }
 
-  function setStyle() {
+  function setLayout() {
     document.getElementById("footer")!.style.background = "";
     document.getElementById("footer")!.style.borderTop = "";
   }
 
   useEffect(() => {
-    setStyle();
+    setLayout();
   }, []);
 
   //Components

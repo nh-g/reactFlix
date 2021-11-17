@@ -1,6 +1,5 @@
-//@ts-nocheck
-//NPM Packages
-import { useEffect, useState } from "react";
+// NPM Packages
+import { useState, useEffect, FormEvent } from "react";
 import { useHistory, Link } from "react-router-dom";
 
 //Local imports
@@ -14,25 +13,29 @@ import Footer from "components/shared/Footer";
 
 export default function Signup() {
   //Local states
-  const [form, setForm] = useState({ username: "", email: "", password: "" });
+  const [form, setForm] = useState<any>({
+    username: "",
+    email: "",
+    password: "",
+  });
   const [message, setMessage] = useState("");
   const history = useHistory();
   const { setLoggedIn, setUser } = useAuth();
 
   // Methods
-  function onChange(key, value) {
+  function onChange(key: string, value: any) {
     const field = { [key]: value };
     setForm({ ...form, ...field });
   }
 
-  async function onSubmit(e) {
-    e.preventDefault();
+  async function onSubmit(event: FormEvent) {
+    event.preventDefault();
     setMessage("");
     const account = await createAccount(form.email, form.password);
     account.isCreated ? onSuccess(account.payload) : onFailure(account.payload);
   }
 
-  async function onSuccess(uid) {
+  async function onSuccess(uid: string) {
     const newUser = {
       username: form.username,
       role: "client",
@@ -44,18 +47,19 @@ export default function Signup() {
     history.push("/browse");
   }
 
-  function onFailure(code) {
+  function onFailure(code: any) {
     setMessage(code);
   }
-  function setStyle() {
-    document.getElementById("footer").style.background = "#f3f3f3";
-    document.getElementById("footer").style.borderTop = "1px solid #E5E5E5";
-    document.getElementById("header").style.background = "white";
+  function setLayout() {
+    document.getElementById("footer")!.style.background = "#f3f3f3";
+    document.getElementById("footer")!.style.borderTop = "1px solid #E5E5E5";
+    document.getElementById("header")!.style.background = "white";
   }
 
   useEffect(() => {
-    setStyle();
+    setLayout();
   }, []);
+
   //Components
   const Fields = fields.map((item) => (
     <InputField
@@ -85,6 +89,7 @@ export default function Signup() {
           </form>
         </div>
       </main>
+
       <Footer />
     </>
   );
