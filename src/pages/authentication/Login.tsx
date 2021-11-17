@@ -1,6 +1,5 @@
-//@ts-nocheck
 //NPM Packages
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 //Local imports
@@ -19,24 +18,24 @@ export default function Login() {
   const history = useHistory();
 
   //Local states
-  const [form, setForm] = useState({ email: "", password: "" });
+  const [form, setForm] = useState<any>({ email: "", password: "" });
   const [remember, setRemember] = useState(false);
   const [message, setMessage] = useState("");
 
   // Methods
-  function onChange(key, value) {
+  function onChange(key: string, value: any) {
     const field = { [key]: value };
     setForm({ ...form, ...field });
   }
 
-  async function onSubmit(e) {
-    e.preventDefault();
+  async function onSubmit(event: FormEvent) {
+    event.preventDefault();
     setMessage("");
     const account = await signIn(form.email, form.password);
     account.isLogged ? onSuccess(account.payload) : onFailure(account.payload);
   }
 
-  async function onSuccess(uid) {
+  async function onSuccess(uid: string) {
     const document = await getDocument("users", uid);
     setUser(document);
     setLoggedIn(true);
@@ -44,13 +43,13 @@ export default function Login() {
     history.push("/browse");
   }
 
-  function onFailure(code) {
+  function onFailure(code: any) {
     setMessage(code);
   }
 
   function setStyle() {
-    document.getElementById("footer").style.background = "";
-    document.getElementById("footer").style.borderTop = "";
+    document.getElementById("footer")!.style.background = "";
+    document.getElementById("footer")!.style.borderTop = "";
   }
 
   useEffect(() => {

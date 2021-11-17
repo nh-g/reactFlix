@@ -4,12 +4,6 @@ import { useRef } from "react";
 // Project files
 import iInputFields from "types/iInPutFields";
 
-interface iProps {
-  options: (iInputFields & React.InputHTMLAttributes<HTMLInputElement>);
-  
-}
-
-
 export default function InputField({ onChange, options, state }: iInputFields ) {
   const { key, label, placeholder, type, mode, required, error } = options;
 
