@@ -36,7 +36,7 @@ export default function CreateSerie({ state, setForm }) {
       {Seasons}
       {state.seasons.length < 20 && (
         <button className="btn btn-add-field" onClick={addSeason} type="button">
-          <h4> Add a season </h4>
+          Add a season 
         </button>
       )}
     </div>

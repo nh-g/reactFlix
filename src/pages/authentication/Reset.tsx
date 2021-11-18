@@ -58,9 +58,7 @@ export default function Reset() {
           <form onSubmit={onSubmit}>
             {Fields}
             <p>{message}</p>
-            <button className="btn-signin">
-              <h4>Recover Password</h4>
-            </button>
+            <button className="btn-signin">Recover Password</button>
           </form>
           <p className="optional-action">
             New to reactflix ?&nbsp;

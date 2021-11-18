@@ -69,7 +69,7 @@ export default function EditSerie({ state, setForm }) {
           </select>
         </label>
         <button className="btn btn-add-field" onClick={addSeason} type="button">
-          <h4> Add season </h4>
+          Add season
         </button>
         {seasonId !== "" && (
           <>
