@@ -1,5 +1,5 @@
 // NPM packages
-import { FC, useState } from "react";
+import { useState } from "react";
 
 // Project files
 import play from "assets/icon/play.png";
@@ -12,7 +12,7 @@ interface iProps {
   data: iTitle;
 }
 
-const Hero: FC<iProps> = ({ data }) => {
+export default function Hero({ data }: iProps) {
   //Local states
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -52,4 +52,3 @@ const Hero: FC<iProps> = ({ data }) => {
     </>
   );
 };
-export default Hero;
