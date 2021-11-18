@@ -1,5 +1,5 @@
 // NPM packages
-import { useState, FC } from "react";
+import { useState} from "react";
 
 // Project files
 import Modal from "components/Modal";
@@ -11,7 +11,8 @@ interface iProps {
   item: iTitle;
 }
 
-const ThumbsItem: FC<iProps> = ({ item }) => {
+export default function ThumbsItem({ item }: iProps) {
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
@@ -39,4 +40,3 @@ const ThumbsItem: FC<iProps> = ({ item }) => {
     </li>
   );
 };
-export default ThumbsItem;

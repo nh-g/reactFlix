@@ -1,6 +1,3 @@
-// NPM packages
-import { FC } from "react";
-
 // Project files
 import Thumbs10Item from "./Thumbs10Item";
 import iTitle from "types/iTitle";
@@ -8,7 +5,7 @@ import iTitle from "types/iTitle";
 interface iProps {
   data: iTitle[];
 }
-const Thumbs10: FC<iProps> = ({ data }) => {
+export default function Thumbs10({ data }: iProps) {
   const Thumbnails = data.map((item, index) => {
     const imgName = index + 1;
     const imgPath = require("assets/icon/numbers/" + imgName + ".svg");
@@ -22,4 +19,3 @@ const Thumbs10: FC<iProps> = ({ data }) => {
     </section>
   );
 };
-export default Thumbs10;
