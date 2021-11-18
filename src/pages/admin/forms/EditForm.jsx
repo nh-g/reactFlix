@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import fields from "../assets/fields-edit.json";
 import InputField from "components/shared/InputField";
 import { updateDocument, deleteDocument } from "scripts/firebase/fireStore";
-import { getCategory } from "scripts/methods";
+import { getCategory } from "scripts/getItem";
 import EditSerie from "./EditSerie";
 import Select from "./Select";
 

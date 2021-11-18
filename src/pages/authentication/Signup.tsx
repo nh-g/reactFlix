@@ -3,9 +3,9 @@ import { useState, useEffect, FormEvent } from "react";
 import { useHistory, Link } from "react-router-dom";
 
 //Local imports
-import fields from "./assets/fields-signup.json";
+import fields from "data/authentication-fields/fields-signup.json";
 import InputField from "../../components/shared/InputField";
-import { createAccount } from "scripts/firebase/auth";
+import { createAccount } from "scripts/firebase/authentication";
 import { useAuth } from "state/AuthProvider";
 import { createDocumentWithId } from "scripts/firebase/fireStore";
 import Header from "components/shared/Header";

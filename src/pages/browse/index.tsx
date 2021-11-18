@@ -4,7 +4,7 @@ import Thumbs from "components/shared/Thumbs";
 import Thumbs10 from "pages/browse/Thumbs10";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import { getCategory, getTop10 } from "scripts/methods";
+import { getCategory, getTop10 } from "scripts/getItem";
 import Player from "components/shared/Player";
 import Hero from "components/shared/Hero";
 import iTitle from "types/iTitle";

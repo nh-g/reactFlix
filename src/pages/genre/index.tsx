@@ -7,7 +7,7 @@ import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import ThumbnailsGenre from "./ThumbnailsGenre";
 import Player from "components/shared/Player";
-import { getCategory } from "scripts/methods";
+import { getCategory } from "scripts/getItem";
 import Hero from "../../components/shared/Hero";
 import Footer from "components/shared/Footer";
 

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 // Project files
 import useFetch from "hooks/useFetch";
-import { searchTitle } from "scripts/methods";
+import { searchTitle } from "scripts/getItem";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import ThumbnailsGenre from "../genre/ThumbnailsGenre";
