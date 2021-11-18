@@ -1,16 +1,16 @@
-//NPM Packages
-import { useState, FC } from "react";
+// NPM packages
+import { useState } from "react";
 
-//Local Files
-import droparrow from "assets/icon/droparrow.svg";
+// Project files
 import iSeason from "types/iSeason";
+import arrowDown from "assets/icon/droparrow.svg";
 
-interface IProps {
+interface iProps {
   data: iSeason[];
   hook: any[];
 }
 
-const Sorter: FC<IProps> = ({ data, hook }) => {
+export default function Sorter({ data, hook }: iProps) {
   const [season, setSeason] = hook;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,10 +35,9 @@ const Sorter: FC<IProps> = ({ data, hook }) => {
         className={isOpen ? "btn-season open" : "btn-season"}
         onClick={() => setIsOpen(!isOpen)}
       >
-        Season {season} <img src={droparrow} alt="" />
+        Season {season} <img src={arrowDown} alt="" />
       </button>
       {isOpen && <ul className="caret">{ListItems}</ul>}
     </section>
   );
 };
-export default Sorter;

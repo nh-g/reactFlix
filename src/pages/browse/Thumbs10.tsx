@@ -5,10 +5,10 @@ import { FC } from "react";
 import Thumbs10Item from "./Thumbs10Item";
 import iTitle from "types/iTitle";
 
-interface IProps {
+interface iProps {
   data: iTitle[];
 }
-const Thumbs10: FC<IProps> = ({ data }) => {
+const Thumbs10: FC<iProps> = ({ data }) => {
   const Thumbnails = data.map((item, index) => {
     const imgName = index + 1;
     const imgPath = require("assets/icon/numbers/" + imgName + ".svg");

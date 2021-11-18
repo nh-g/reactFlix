@@ -4,10 +4,10 @@ import { FC } from "react";
 //Local Files
 import SortButton from "pages/admin/SortButton";
 
-interface IProps {
+interface iProps {
   hook: any[];
 }
-const Sorter: FC<IProps> = ({ hook }) => {
+const Sorter: FC<iProps> = ({ hook }) => {
   return (
     <section className="sorter">
       <SortButton target="create" hook={hook}>

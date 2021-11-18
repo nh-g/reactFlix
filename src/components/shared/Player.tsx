@@ -7,7 +7,7 @@ interface iProps {
   controls: string;
 }
 
-export default function Player({ video, autoplay, controls } : iProps) {
+export default function Player({ video, autoplay, controls }: iProps) {
   const videoId = getYouTubeID(video);
 
   return (
@@ -23,4 +23,4 @@ export default function Player({ video, autoplay, controls } : iProps) {
       />
     </div>
   );
-};
+}

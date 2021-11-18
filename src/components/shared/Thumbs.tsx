@@ -4,11 +4,11 @@ import { FC } from "react";
 import iTitle from "types/iTitle";
 
 //Local Files
-interface IProps {
+interface iProps {
   data: iTitle[];
   children: string;
 }
-const Thumbs: FC<IProps> = ({ data, children }) => {
+const Thumbs: FC<iProps> = ({ data, children }) => {
   const Thumbnails = data.map((item, index) => (
     <ThumbsItem key={index} item={item} />
   ));

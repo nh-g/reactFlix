@@ -5,12 +5,12 @@ import { FC } from "react";
 import ThumbsItem from "pages/browse/ThumbsItem";
 import iTitle from "types/iTitle";
 
-interface IProps {
+interface iProps {
   data: iTitle[];
   children: string;
 }
 
-const ThumbnailsGenre: FC<IProps> = ({ data, children }) => {
+const ThumbnailsGenre: FC<iProps> = ({ data, children }) => {
   const Thumbnails = data.map((item, index) => (
     <ThumbsItem key={index} item={item} />
   ));

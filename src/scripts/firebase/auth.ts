@@ -5,7 +5,7 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { authInstance } from "./firebase";
-import getFriendlyError from "./messages";
+import getFriendlyError from "scripts/getFriendlyError";
 
 export async function createAccount(email: string, password: string) {
   const account = { isCreated: false, payload: "" };

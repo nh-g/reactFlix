@@ -5,8 +5,8 @@ import { Link, useHistory } from "react-router-dom";
 // Project files
 import fields from "./assets/fields-login.json";
 import InputField from "components/shared/InputField";
-import { signIn } from "scripts/auth";
-import { getDocument } from "scripts/fireStore";
+import { signIn } from "scripts/firebase/auth";
+import { getDocument } from "scripts/firebase/fireStore";
 import { useAuth } from "state/AuthProvider";
 import Header from "components/shared/Header";
 import authPageBackground from "assets/images/authBackground.jpg";

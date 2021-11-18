@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 // Project files
 import fields from "./assets/fields-recover.json";
 import InputField from "../../components/shared/InputField";
-import { recover } from "scripts/auth";
+import { recover } from "scripts/firebase/auth";
 import authPageBackground from "assets/images/authBackground.jpg";
 import Header from "components/shared/Header";
 import Footer from "components/shared/Footer";

@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import fields from "../assets/fields-create.json";
 import InputField from "components/shared/InputField";
 import CreateSerie from "./CreateSerie";
-import { createDoc } from "scripts/fireStore";
+import { createDoc } from "scripts/firebase/fireStore";
 
 export default function CreateForm() {
   //Local states

@@ -1,11 +1,9 @@
-import { FC } from "react";
-
-interface IProps {
+interface iProps {
   data: string[];
   children: string;
 }
 
-const Lister: FC<IProps> = ({ data, children }) => {
+export default function Lister({ data, children }: iProps) {
   const list = data.toString();
 
   return (
@@ -16,5 +14,4 @@ const Lister: FC<IProps> = ({ data, children }) => {
       </p>
     </div>
   );
-};
-export default Lister;
+}

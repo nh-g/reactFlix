@@ -1,4 +1,4 @@
-export default function getFriendlyError(errorCode) {
+export default function getFriendlyError(errorCode: string) {
   switch (errorCode) {
     case "auth/wrong-password":
       return "Oops, you entered a wrong password";

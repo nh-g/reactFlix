@@ -3,8 +3,8 @@ import { useEffect, useState, useCallback } from "react";
 import { Firestore } from "@firebase/firestore/dist/lite";
 
 // Project files
-import { firestoreInstance } from "scripts/firebase";
-import { getCollection } from "scripts/fireStore";
+import { firestoreInstance } from "scripts/firebase/firebase";
+import { getCollection } from "scripts/firebase/fireStore";
 
 export default function useFetch(collection: string, dispatch: any) {
   

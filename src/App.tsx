@@ -5,7 +5,7 @@ import { BrowserRouter, Switch } from "react-router-dom";
 // Project files
 import "styles/base.sass";
 import { useAuth } from "state/AuthProvider";
-import { getDocument } from "scripts/fireStore";
+import { getDocument } from "scripts/firebase/fireStore";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import UnLogged from "routes/Unlogged";
 import Logged from "routes/Logged";

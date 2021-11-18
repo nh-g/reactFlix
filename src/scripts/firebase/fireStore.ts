@@ -11,7 +11,7 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore/lite";
-import { firestoreInstance } from "scripts/firebase";
+import { firestoreInstance } from "scripts/firebase/firebase";
 
 // Create doc with auto id
 export async function createDoc(path: string, data: object) {

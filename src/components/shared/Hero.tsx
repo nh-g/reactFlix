@@ -4,26 +4,26 @@ import { FC, useState } from "react";
 // Project files
 import play from "assets/icon/play.png";
 import info from "assets/icon/info.png";
-import Modal from "components/modal/Modal";
-import { fixBG, unfixBG } from "scripts/modal";
+import Modal from "components/Modal";
+import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
 import iTitle from "types/iTitle";
 
-interface IProps {
+interface iProps {
   data: iTitle;
 }
 
-const Hero: FC<IProps> = ({ data }) => {
+const Hero: FC<iProps> = ({ data }) => {
   //Local states
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
     setIsModalOpen(true);
-    fixBG();
+    freezeBackground();
   }
 
   function closeModal() {
     setIsModalOpen(false);
-    unfixBG();
+    unFreezeBackground();
   }
 
   return (

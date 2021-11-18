@@ -4,10 +4,10 @@ import { FC } from "react";
 //Local Files
 import iTitle from "types/iTitle";
 
-interface IProps {
+interface iProps {
   element: iTitle;
 }
-const ThumbsMeta: FC<IProps> = ({ element }) => {
+const ThumbsMeta: FC<iProps> = ({ element }) => {
   const mockMatch = Math.floor(Math.random() * (100 - 80) + 80);
   return (
     <section className="thumbs-meta">

@@ -2,26 +2,26 @@
 import { useState, FC } from "react";
 
 //Local Files
-import Modal from "components/modal/Modal";
-import { fixBG, unfixBG } from "scripts/modal";
+import Modal from "components/Modal";
+import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
 import iTitle from "types/iTitle";
 import ThumbsMeta from "components/shared/ThumbsMeta";
 
-interface IProps {
+interface iProps {
   item: iTitle;
 }
 
-const ThumbsItem: FC<IProps> = ({ item }) => {
+const ThumbsItem: FC<iProps> = ({ item }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
     setIsModalOpen(true);
-    fixBG();
+    freezeBackground();
   }
 
   function closeModal() {
     setIsModalOpen(false);
-    unfixBG();
+    unFreezeBackground();
   }
 
   return (

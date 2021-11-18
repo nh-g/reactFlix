@@ -1,15 +1,14 @@
-//NPM Packages
-import YouTube from "react-youtube";
+// NPM packages
 import getYouTubeID from "get-youtube-id";
-import { FC } from "react";
+import YouTube from "react-youtube";
 
-interface IProps {
+interface iProps {
   video: string;
   onPlay: any;
   onPause: any;
 }
 
-const PlayerControlled: FC<IProps> = ({ video, onPlay, onPause }) => {
+export default function PlayerControlled({ video, onPlay, onPause }: iProps) {
   const videoId = getYouTubeID(video);
 
   return (
@@ -20,4 +19,3 @@ const PlayerControlled: FC<IProps> = ({ video, onPlay, onPause }) => {
     </div>
   );
 };
-export default PlayerControlled;

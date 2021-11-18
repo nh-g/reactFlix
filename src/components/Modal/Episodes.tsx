@@ -1,16 +1,13 @@
-// NPM packages
-import { FC } from "react";
-
 // Project files
 import iEpisode from "types/iEpisode";
 
-interface IProps {
+interface iProps {
   data: any[];
   seasonId: number;
   setVideo(arg: string): void;
 }
 
-const Episodes: FC<IProps> = ({ data, seasonId, setVideo }) => {
+export default function Episodes({ data, seasonId, setVideo }: iProps) {
   const episodes = data[seasonId - 1].episodes;
 
   const Episodes = episodes.map((item: iEpisode, index: number) => (
@@ -43,4 +40,3 @@ const Episodes: FC<IProps> = ({ data, seasonId, setVideo }) => {
     return <section className="episodes">{Episodes}</section>;
   }
 };
-export default Episodes;

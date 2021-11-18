@@ -1,34 +1,35 @@
-//NPM Packages
+// NPM packages
+import { useState} from "react";
 import reactDom from "react-dom";
-import { useState, FC } from "react";
 
-//Local Files
-import cross from "assets/icon/cross.png";
+// Project files
+import exit from "assets/icon/cross.png";
 import Episodes from "./Episodes";
 import Sorter from "./Sorter";
 import PlayerControlled from "./PlayerControlled";
 import iTitle from "types/iTitle";
 import Meta from "./Meta";
 
-interface IProps {
+interface iProps {
+  element: iTitle;
   isOpen: boolean;
   onClose(): void;
-  element: iTitle;
 }
 
-const Modal: FC<IProps> = ({ isOpen, onClose, element }) => {
+export default function Modal({ isOpen, onClose, element }: iProps) {
   const [seasonId, setSeasonId] = useState(1);
   const [video, setVideo] = useState(element.trailer);
   const [titleVisibility, setTitleVisibility] = useState(true);
 
   if (!isOpen) return null;
+
   return reactDom.createPortal(
     <>
       <div className="modal-overlay" onClick={onClose} />
 
       <div className="modal">
         <button className="btn-close" onClick={onClose}>
-          <img alt="close" src={cross} />
+          <img alt="close" src={exit} />
         </button>
 
         <div className="illustration">
@@ -37,7 +38,6 @@ const Modal: FC<IProps> = ({ isOpen, onClose, element }) => {
             onPlay={() => setTitleVisibility(false)}
             onPause={() => setTitleVisibility(true)}
           />
-          {/* <div className="gradient" /> disabled : hides the Youtube controls */}
           {titleVisibility && (
             <div className="block">
               {element.logo_url && (
@@ -71,4 +71,3 @@ const Modal: FC<IProps> = ({ isOpen, onClose, element }) => {
     document.getElementById("modal")
   );
 };
-export default Modal;

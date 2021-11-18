@@ -1,11 +1,11 @@
 //NPM Packages
 import { FC } from "react";
-interface IProps {
+interface iProps {
   children: string;
   target: string;
   hook: any[];
 }
-const SortButton: FC<IProps> = ({ children, target, hook }) => {
+const SortButton: FC<iProps> = ({ children, target, hook }) => {
   const [selection, setSelection] = hook;
 
   return (

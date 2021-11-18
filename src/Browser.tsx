@@ -24,11 +24,11 @@ import Admin from "pages/admin/Admin";
 import Search from "pages/search";
 import Genre from "pages/genre";
 
-interface iProps{
-    loggedIn: boolean
+interface iProps {
+  loggedIn: boolean;
 }
 export default function Browser({ loggedIn }: iProps) {
-    console.log("loggedIn", loggedIn);
+  console.log("loggedIn", loggedIn);
   return (
     <BrowserRouter>
       <Switch>

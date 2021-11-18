@@ -1,18 +1,15 @@
 // Project files
 import iTitle from "types/iTitle";
-import Lister from "./Lister";
+import Lister from "components/Modal/Lister";
 
 interface iProps {
   element: iTitle;
 }
 
 export default function Meta ({ element }: iProps) {
-  // const mockMatchRate = Math.floor(Math.random() * (100 - 70) + 70);
   return (
     <section className="meta">
       <div className="details">
-        {/* <p className="match">{mockMatchRate}% Match </p>
-        <span> | </span> */}
 
         <p className="year">{element.year} </p>
         <span> | </span>
