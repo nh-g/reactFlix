@@ -1,8 +1,8 @@
-//NPM Packages
+// NPM packages
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-//Local imports
+// Project files
 import fields from "../assets/fields-create.json";
 import InputField from "components/shared/InputField";
 import CreateSerie from "./CreateSerie";
@@ -15,7 +15,7 @@ export default function CreateForm() {
     description: "",
     category: "film",
     image_url: "",
-    logo_url:"",
+    logo_url: "",
     trailer: "",
     year: "",
     cast: "",
@@ -81,9 +81,7 @@ export default function CreateForm() {
       )}
 
       <p>{errorMessage}</p>
-      <button className="btn btn-submit btn-white">
-        Submit
-      </button>
+      <button className="btn btn-submit btn-white">Submit</button>
     </form>
   );
 }

@@ -1,4 +1,4 @@
-//NPM Packages
+// NPM packages
 import { FC } from "react";
 
 export const BoxError: FC = () => {

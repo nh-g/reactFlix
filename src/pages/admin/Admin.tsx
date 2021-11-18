@@ -1,4 +1,4 @@
-//NPM Packages
+// NPM packages
 import { useState } from "react";
 
 //Local imports
@@ -10,7 +10,7 @@ import { BoxError, Spinner } from "components/shared/FetchItems";
 import useFetch from "hooks/useFetch";
 import Footer from "components/shared/Footer";
 
-export default function Admin(){
+export default function Admin() {
   // Global state
   const { dispatch } = useTitles();
   const titles = useFetch("demo_title", dispatch);
@@ -36,4 +36,4 @@ export default function Admin(){
       <Footer />
     </>
   );
-};
+}

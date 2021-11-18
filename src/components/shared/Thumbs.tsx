@@ -1,4 +1,4 @@
-//NPM Packages
+// NPM packages
 import ThumbsItem from "pages/browse/ThumbsItem";
 import { FC } from "react";
 import iTitle from "types/iTitle";

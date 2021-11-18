@@ -1,4 +1,4 @@
-//NPM Packages
+// NPM packages
 import { useState, FC } from "react";
 import { useHistory } from "react-router-dom";
 

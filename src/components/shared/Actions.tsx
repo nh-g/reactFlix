@@ -1,4 +1,4 @@
-//NPM Packages
+// NPM packages
 import { NavLink, useHistory } from "react-router-dom";
 import { FC } from "react";
 
