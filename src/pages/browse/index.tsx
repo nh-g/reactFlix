@@ -17,7 +17,7 @@ export default function Browse() {
   const titles = useFetch("demo_title", dispatch);
 
   //Local states
-  const autoplay = "0"; //Change to "1" here  to have video background running in production
+  const autoplay = "1"; //To have video background NOT running in production, change to 0
   const randomIndex = Math.floor(Math.random() * titles.data.length);
   const randomTitle: iTitle = titles.data[randomIndex];
   const series = getGenre(titles.data, "series");
@@ -33,6 +33,8 @@ export default function Browse() {
       {(!titles.loading && titles.error) === null && (
         <>
           <div className="hero-bg">
+            {/* <img src={randomTitle.image_url} alt="" />  */}
+
             <Player
               video={randomTitle.trailer}
               autoplay={autoplay}
