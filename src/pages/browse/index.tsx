@@ -17,7 +17,7 @@ export default function Browse() {
   const titles = useFetch("demo_title", dispatch);
 
   //Local states
-  const autoplay = "1"; //To have video background NOT running in production, change to 0
+  const autoplay = "0"; //To have video background NOT running in production, change to 0
   const randomIndex = Math.floor(Math.random() * titles.data.length);
   const randomTitle: iTitle = titles.data[randomIndex];
   const series = getGenre(titles.data, "series");

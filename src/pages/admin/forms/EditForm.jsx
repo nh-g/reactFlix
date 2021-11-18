@@ -102,7 +102,7 @@ export default function EditForm({ data }) {
         <>
           <div className="general">
             <h2>General informations : </h2>
-            <div className="main-bloc">{GeneralFields}</div>
+            <div className="main-input-form">{GeneralFields}</div>
           </div>
           {form.genre === "series" && (
             <EditSerie state={form} setForm={setForm} handleDelete={onDelete} />

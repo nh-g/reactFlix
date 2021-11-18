@@ -19,7 +19,7 @@ interface iProps {
 export default function Modal({ isOpen, onClose, element }: iProps) {
   const [seasonId, setSeasonId] = useState(1);
   const [video, setVideo] = useState(element.trailer);
-  const [titleVisibility, setTitleVisibility] = useState(true);
+  const [showLogo, setShowLogo] = useState(true);
 
   if (!isOpen) return null;
 
@@ -35,10 +35,10 @@ export default function Modal({ isOpen, onClose, element }: iProps) {
         <div className="illustration">
           <PlayerControlled
             video={video}
-            onPlay={() => setTitleVisibility(false)}
-            onPause={() => setTitleVisibility(true)}
+            onPlay={() => setShowLogo(false)}
+            onPause={() => setShowLogo(true)}
           />
-          {titleVisibility && (
+          {showLogo && (
             <div className="block">
               {element.logo_url && (
                 <img

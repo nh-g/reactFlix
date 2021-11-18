@@ -9,8 +9,8 @@ interface iProps {
 export default function Meta ({ element }: iProps) {
   return (
     <section className="meta">
-      <div className="details">
 
+      <div className="details">
         <p className="year">{element.year} </p>
         <span> | </span>
 

@@ -1,14 +1,12 @@
-// NPM packages
-import { FC } from "react";
-
 // Project files
 import iTitle from "types/iTitle";
 
 interface iProps {
   element: iTitle;
 }
-const ThumbsMeta: FC<iProps> = ({ element }) => {
+export default function ThumbsMeta({ element }: iProps) {
   const mockMatch = Math.floor(Math.random() * (100 - 80) + 80);
+  
   return (
     <section className="thumbs-meta">
       <div className="details">
@@ -21,4 +19,3 @@ const ThumbsMeta: FC<iProps> = ({ element }) => {
     </section>
   );
 };
-export default ThumbsMeta;

@@ -7,6 +7,14 @@
     "mode": "create",
     "required": true
   },
+    {
+    "key": "advised_public",
+    "label": "Recommended Age",
+    "placeholder": "13",
+    "type": "text",
+    "mode": "create",
+    "required": false
+  },
   {
     "key": "description",
     "label": "Description",

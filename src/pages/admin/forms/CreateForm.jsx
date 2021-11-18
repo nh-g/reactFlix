@@ -60,20 +60,21 @@ export default function CreateForm() {
     <form onSubmit={onSubmit} className="form-admin">
       <label className="selector">
         <h2>Select genre : </h2>
-        {form.genre}
+        {/* {form.genre} */}
         <select
           onChange={(e) => {
             setForm({ ...form, genre: e.target.value });
           }}
         >
-          <option value="film">Film</option>
           <option value="series">Serie</option>
+          <option value="film">Film</option>
           <option value="documentary">Documentary</option>
         </select>
       </label>
+
       <div className="general">
         <h2>General informations : </h2>
-        <div className="main-bloc">{Fields}</div>
+        <div className="main-input-form">{Fields}</div>
       </div>
 
       {form.genre === "series" && (

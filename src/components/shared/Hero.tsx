@@ -2,11 +2,11 @@
 import { useState } from "react";
 
 // Project files
-import play from "assets/icon/play.png";
-import info from "assets/icon/info.png";
 import Modal from "components/Modal";
 import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
 import iTitle from "types/iTitle";
+import playIcon from "assets/icon/play.png";
+import infoIcon from "assets/icon/info.png";
 
 interface iProps {
   data: iTitle;
@@ -40,10 +40,10 @@ export default function Hero({ data }: iProps) {
         <h2>{data.description}</h2>
         <div className="buttons">
           <button className="btn-play" onClick={openModal}>
-            <img src={play} alt="" /> Play
+            <img src={playIcon} alt="" /> Play
           </button>
           <button className="btn-more-info" onClick={openModal}>
-            <img src={info} alt="" />
+            <img src={infoIcon} alt="" />
             More Info
           </button>
         </div>
