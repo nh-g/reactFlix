@@ -1,7 +1,7 @@
-//NPM Packages
+// NPM packages
 import { FC } from "react";
 
-//Local Files
+// Project files
 import iEpisode from "types/iEpisode";
 
 interface IProps {

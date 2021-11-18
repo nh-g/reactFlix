@@ -16,10 +16,10 @@ interface iProps {
 export default function Search() {
   // Global state
   const { dispatch } = useTitles();
-  const titles = useFetch("title_test", dispatch);
+  const titles = useFetch("demo_title", dispatch);
 
   //Local states
-  const { query } = useParams < iProps>();
+  const { query } = useParams<iProps>();
   const results = searchTitle(titles.data, query);
 
   return (
@@ -38,4 +38,4 @@ export default function Search() {
       <Footer />
     </>
   );
-};
+}

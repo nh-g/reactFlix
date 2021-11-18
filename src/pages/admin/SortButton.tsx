@@ -12,8 +12,8 @@ const SortButton: FC<IProps> = ({ children, target, hook }) => {
     <button
       className={
         selection === target
-          ? "btn btn-orange btn-active "
-          : "btn btn-orange btn-inactive"
+          ? "btn btn-white btn-active "
+          : "btn btn-white btn-inactive"
       }
       onClick={() => {
         setSelection(target);

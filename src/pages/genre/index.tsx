@@ -14,10 +14,10 @@ import Footer from "components/shared/Footer";
 interface iProps {
   genreName: string;
 }
-export default function Genre(){
+export default function Genre() {
   // Global state
   const { dispatch } = useTitles();
-  const titles = useFetch("title_test", dispatch);
+  const titles = useFetch("demo_title", dispatch);
 
   // Local states
   const { genreName } = useParams<iProps>();
@@ -65,4 +65,4 @@ export default function Genre(){
       )}
     </>
   );
-};
+}

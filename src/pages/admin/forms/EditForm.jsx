@@ -33,10 +33,10 @@ export default function EditForm({ data }) {
     if (window.confirm("Do you confirm the changes ?")) {
       e.preventDefault();
       setErrorMessage("");
-      await updateDocument("title_test", form.id, form);
+      await updateDocument("demo_title", form.id, form);
 
       alert("Title successfully edited");
-      history.push("/admin");
+      history.push("/browse");
     }
   }
 
@@ -52,7 +52,7 @@ export default function EditForm({ data }) {
       validationText.toLowerCase() === item.title.toLowerCase()
     ) {
       setErrorMessage("");
-      await deleteDocument("title_test", item.id);
+      await deleteDocument("demo_title", item.id);
       alert(`Title [${item.title}]   deleted`);
       history.push("/admin");
     } else {
@@ -94,7 +94,6 @@ export default function EditForm({ data }) {
   return (
     <form onSubmit={onSubmit} className="form-admin">
       <div className="selector">
-        <h2>Selection : </h2>
         <Select hook={[item, setItem]} setFormVisibility={setFormVisibility} />
         {item.category !== "none" && <ul>{Items}</ul>}
       </div>
@@ -109,7 +108,7 @@ export default function EditForm({ data }) {
             <EditSerie state={form} setForm={setForm} handleDelete={onDelete} />
           )}
           <p>{errorMessage}</p>
-          <button className="btn btn-submit btn-orange">
+          <button className="btn btn-submit btn-white">
             <h4>Submit</h4>
           </button>{" "}
         </>

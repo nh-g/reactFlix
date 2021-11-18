@@ -1,5 +1,5 @@
 //NPM Packages
-import { useState, FC } from "react";
+import { useState } from "react";
 
 //Local imports
 import Sorter from "pages/admin/Sorter";
@@ -10,11 +10,10 @@ import { BoxError, Spinner } from "components/shared/FetchItems";
 import useFetch from "hooks/useFetch";
 import Footer from "components/shared/Footer";
 
-const Admin: FC = () => {
+export default function Admin(){
   // Global state
-  //@ts-ignore
   const { dispatch } = useTitles();
-  const titles = useFetch("title_test", dispatch);
+  const titles = useFetch("demo_title", dispatch);
 
   //Local states
   const [selection, setSelection] = useState("edit");
@@ -26,7 +25,10 @@ const Admin: FC = () => {
 
       {(!titles.loading && titles.error) === null && (
         <main className="page-admin">
+          <h1>Admin Page</h1>
+
           <Sorter hook={[selection, setSelection]} />
+
           {selection === "create" && <CreateForm />}
           {selection === "edit" && <EditForm data={titles.data} />}
         </main>
@@ -35,4 +37,3 @@ const Admin: FC = () => {
     </>
   );
 };
-export default Admin;

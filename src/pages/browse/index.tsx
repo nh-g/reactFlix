@@ -14,7 +14,7 @@ import { Footer } from "components";
 export default function Browse() {
   // Global state
   const { dispatch } = useTitles();
-  const titles = useFetch("title_test", dispatch);
+  const titles = useFetch("demo_title", dispatch);
 
   //Local states
   const autoplay = "0"; //Change to "1" here  to have video background running in production
@@ -30,38 +30,38 @@ export default function Browse() {
       {titles.loading === true && <Spinner />}
       {titles.error !== null && <BoxError />}
 
-      {(!titles.loading && titles.error) === null && (
+      {(!titles.loading && titles.error) === null &&(           
         <>
-          <div className="hero-bg">
-            <Player
-              video={randomTitle.trailer}
-              autoplay={autoplay}
-              controls="0"
-            />
-            <div className="gradient" />
-          </div>
-          <main className="page-home">
-            <Hero data={randomTitle} />
-            <Thumbs data={series}>Series</Thumbs>
-            <Thumbs data={films}>Films</Thumbs>
-            <Thumbs data={documentaries}>Documentaries</Thumbs>
-            <Thumbs10 data={top10} />
-          </main>
-
-          <div className="Home__row" id="bigFooter">
-            <Footer
-              className="Home__footer"
-              menuLinks={footerLinks}
-              showHotlineNumber
-              showLanguagePicker
-            >
-              <div className="Home__footerSiteName">
-                Netflix Clone © 2021 • giangngohong@gmail.com
+              <div className="hero-bg">
+                <Player
+                  video={randomTitle.trailer}
+                  autoplay={autoplay}
+                  controls="0"
+                />
+                <div className="gradient" />
               </div>
-            </Footer>
-          </div>
-        </>
-      )}
+              <main className="page-home">
+                <Hero data={randomTitle} />
+                <Thumbs data={series}>Series</Thumbs>
+                <Thumbs data={films}>Films</Thumbs>
+                <Thumbs data={documentaries}>Documentaries</Thumbs>
+                <Thumbs10 data={top10} />
+              </main>
+
+              <div className="Home__row" id="bigFooter">
+                <Footer
+                  className="Home__footer"
+                  menuLinks={footerLinks}
+                  showHotlineNumber
+                  showLanguagePicker
+                >
+                  <div className="Home__footerSiteName">
+                    Netflix Clone © 2021 • giangngohong@gmail.com
+                  </div>
+                </Footer>
+              </div>
+            </>
+          )}
     </>
   );
 }

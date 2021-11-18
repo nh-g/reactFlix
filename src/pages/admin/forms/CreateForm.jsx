@@ -15,6 +15,7 @@ export default function CreateForm() {
     description: "",
     category: "film",
     image_url: "",
+    logo_url:"",
     trailer: "",
     year: "",
     cast: "",
@@ -40,9 +41,9 @@ export default function CreateForm() {
     if (form.category !== "serie") {
       title.seasons = null;
     }
-    await createDoc("title_test", title);
+    await createDoc("demo_title", title);
     alert("Title created");
-    history.push("/admin");
+    history.push("/browse");
   }
 
   //Components
@@ -58,8 +59,8 @@ export default function CreateForm() {
   return (
     <form onSubmit={onSubmit} className="form-admin">
       <label className="selector">
-        <h2>Selection : </h2>
-        Select a category : {form.category}
+        <h2>Select genre : </h2>
+        {form.category}
         <select
           onChange={(e) => {
             setForm({ ...form, category: e.target.value });
@@ -80,7 +81,7 @@ export default function CreateForm() {
       )}
 
       <p>{errorMessage}</p>
-      <button className="btn btn-submit btn-orange">
+      <button className="btn btn-submit btn-white">
         <h4>Submit</h4>
       </button>
     </form>
