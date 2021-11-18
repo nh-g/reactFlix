@@ -1,7 +1,7 @@
 // NPM packages
 import { FC } from "react";
 
-//Local Files
+// Project files
 import Thumbs10Item from "./Thumbs10Item";
 import iTitle from "types/iTitle";
 

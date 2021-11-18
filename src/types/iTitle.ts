@@ -12,6 +12,6 @@ export default interface iTitle {
   cast: string[];
   genres: string[];
   tags: string[];
-  category: string;
+  genre: string;
   seasons: iSeason[];
 }

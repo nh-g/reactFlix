@@ -1,5 +1,5 @@
 // NPM packages
-import { useState} from "react";
+import { useState } from "react";
 import reactDom from "react-dom";
 
 // Project files
@@ -55,7 +55,7 @@ export default function Modal({ isOpen, onClose, element }: iProps) {
         <div className="container">
           <Meta element={element} />
 
-          {element.seasons && element.category === "serie" && (
+          {element.seasons && element.genre === "series" && (
             <>
               <Sorter data={element.seasons} hook={[seasonId, setSeasonId]} />
               <Episodes
@@ -70,4 +70,4 @@ export default function Modal({ isOpen, onClose, element }: iProps) {
     </>, //@ts-ignore
     document.getElementById("modal")
   );
-};
+}

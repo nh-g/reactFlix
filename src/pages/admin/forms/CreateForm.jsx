@@ -13,7 +13,7 @@ export default function CreateForm() {
   const [form, setForm] = useState({
     title: "",
     description: "",
-    category: "film",
+    genre: "film",
     image_url: "",
     logo_url: "",
     trailer: "",
@@ -38,7 +38,7 @@ export default function CreateForm() {
     e.preventDefault();
     setErrorMessage("");
     let title = { ...form };
-    if (form.category !== "serie") {
+    if (form.genre !== "series") {
       title.seasons = null;
     }
     await createDoc("demo_title", title);
@@ -60,14 +60,14 @@ export default function CreateForm() {
     <form onSubmit={onSubmit} className="form-admin">
       <label className="selector">
         <h2>Select genre : </h2>
-        {form.category}
+        {form.genre}
         <select
           onChange={(e) => {
-            setForm({ ...form, category: e.target.value });
+            setForm({ ...form, genre: e.target.value });
           }}
         >
           <option value="film">Film</option>
-          <option value="serie">Serie</option>
+          <option value="series">Serie</option>
           <option value="documentary">Documentary</option>
         </select>
       </label>
@@ -76,7 +76,7 @@ export default function CreateForm() {
         <div className="main-bloc">{Fields}</div>
       </div>
 
-      {form.category === "seri" && (
+      {form.genre === "series" && (
         <CreateSerie state={form} setForm={setForm} />
       )}
 

@@ -2,7 +2,7 @@
 import { useState, FC } from "react";
 import { useHistory } from "react-router-dom";
 
-//Local Files
+// Project files
 import searchIcon from "assets/images/search.png";
 
 const SearchBar: FC = () => {

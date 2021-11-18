@@ -6,13 +6,13 @@ export function getById(id, array) {
   }
 }
 
-export function getCategory(array, category) {
+export function getGenre(array, genre) {
   if (array !== undefined) {
-    if (category === "all") {
+    if (genre === "all") {
       return array;
     }
     return array.filter((item) => {
-      return item.category === category;
+      return item.genre === genre;
     });
   } else {
     return [];

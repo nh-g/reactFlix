@@ -6,19 +6,19 @@ import { useHistory } from "react-router-dom";
 import fields from "../assets/fields-edit.json";
 import InputField from "components/shared/InputField";
 import { updateDocument, deleteDocument } from "scripts/firebase/fireStore";
-import { getCategory } from "scripts/getItem";
+import { getGenre } from "scripts/getItem";
 import EditSerie from "./EditSerie";
 import Select from "./Select";
 
 export default function EditForm({ data }) {
   //Local states
   const [form, setForm] = useState(data);
-  const [item, setItem] = useState({ category: "" });
+  const [item, setItem] = useState({ genre: "" });
   const [formVisibility, setFormVisibility] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
 
-  const items = getCategory(data, item.category);
+  const items = getGenre(data, item.genre);
 
   // Methods
   function onSelect(item) {
@@ -95,7 +95,7 @@ export default function EditForm({ data }) {
     <form onSubmit={onSubmit} className="form-admin">
       <div className="selector">
         <Select hook={[item, setItem]} setFormVisibility={setFormVisibility} />
-        {item.category !== "none" && <ul>{Items}</ul>}
+        {item.genre !== "none" && <ul>{Items}</ul>}
       </div>
 
       {formVisibility && (
@@ -104,13 +104,11 @@ export default function EditForm({ data }) {
             <h2>General informations : </h2>
             <div className="main-bloc">{GeneralFields}</div>
           </div>
-          {form.category === "serie" && (
+          {form.genre === "series" && (
             <EditSerie state={form} setForm={setForm} handleDelete={onDelete} />
           )}
           <p>{errorMessage}</p>
-          <button className="btn btn-submit btn-white">
-            Submit
-          </button>{" "}
+          <button className="btn btn-submit btn-white">Submit</button>{" "}
         </>
       )}
     </form>

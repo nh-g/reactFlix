@@ -1,7 +1,7 @@
 // NPM packages
 import { FC } from "react";
 
-//Local Files
+// Project files
 import iTitle from "types/iTitle";
 
 interface iProps {

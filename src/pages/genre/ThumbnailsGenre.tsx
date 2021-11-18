@@ -1,27 +1,23 @@
-// NPM packages
-import { FC } from "react";
-
-//Local Files
-import ThumbsItem from "pages/browse/ThumbsItem";
+// Project files
 import iTitle from "types/iTitle";
+import ThumbsItem from "pages/browse/ThumbsItem";
 
 interface iProps {
   data: iTitle[];
   children: string;
 }
 
-const ThumbnailsGenre: FC<iProps> = ({ data, children }) => {
+export default function ThumbnailsGenre({ data, children }: iProps) {
   const Thumbnails = data.map((item, index) => (
     <ThumbsItem key={index} item={item} />
   ));
 
   return (
     <>
-      <section className="category-thumbs">
+      <section className="genre-thumbs">
         <h2 className="title"> {children}</h2>
         <ul className="track">{Thumbnails}</ul>
       </section>
     </>
   );
-};
-export default ThumbnailsGenre;
+}

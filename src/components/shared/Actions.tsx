@@ -2,7 +2,7 @@
 import { NavLink, useHistory } from "react-router-dom";
 import { FC } from "react";
 
-//Local Files
+// Project files
 import avatar from "assets/images/avatar.png";
 import droparrow from "assets/icon/droparrow.svg";
 import { useAuth } from "state/AuthProvider";

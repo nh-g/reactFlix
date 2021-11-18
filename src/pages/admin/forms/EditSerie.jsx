@@ -1,7 +1,7 @@
 // NPM packages
 import { useState } from "react";
 
-//Local Files
+// Project files
 import EpisodesList from "./EpisodesList";
 import EditEpisode from "./EditEpisode";
 

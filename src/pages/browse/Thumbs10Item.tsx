@@ -1,7 +1,7 @@
 // NPM packages
 import { useState, FC } from "react";
 
-//Local Files
+// Project files
 import Modal from "components/Modal";
 import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
 import iTitle from "types/iTitle";

@@ -7,7 +7,7 @@ import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import ThumbnailsGenre from "./ThumbnailsGenre";
 import Player from "components/shared/Player";
-import { getCategory } from "scripts/getItem";
+import { getGenre } from "scripts/getItem";
 import Hero from "../../components/shared/Hero";
 import Footer from "components/shared/Footer";
 
@@ -21,16 +21,16 @@ export default function Genre() {
 
   // Local states
   const { genreName } = useParams<iProps>();
-  const categoryTitles = getCategory(titles.data, genreName);
+  const genreTitles = getGenre(titles.data, genreName);
 
-  const randomIndex = Math.floor(Math.random() * categoryTitles.length);
-  const randomTitle = categoryTitles[randomIndex];
+  const randomIndex = Math.floor(Math.random() * genreTitles.length);
+  const randomTitle = genreTitles[randomIndex];
 
   function getHeading(genre: string): string {
     switch (genre) {
       case "film":
         return "Films";
-      case "serie":
+      case "series":
         return "Series";
       case "documentary":
         return "Documentaries";
@@ -46,16 +46,16 @@ export default function Genre() {
       {(!titles.loading && titles.error) === null && (
         <>
           <div className="hero-bg">
-            <div className="category-heading">{getHeading(genreName)}</div>
+            <div className="genre-heading">{getHeading(genreName)}</div>
             <Player video={randomTitle.trailer} autoplay="0" controls="0" />
             <div className="gradient" />
           </div>
           <main className="page-home">
             <Hero data={randomTitle} />
 
-            {categoryTitles.length === 0 && <h1>No titles found ... </h1>}
-            {categoryTitles.length > 0 && (
-              <ThumbnailsGenre data={categoryTitles}>
+            {genreTitles.length === 0 && <h1>No titles found ... </h1>}
+            {genreTitles.length > 0 && (
+              <ThumbnailsGenre data={genreTitles}>
                 {getHeading(genreName)}
               </ThumbnailsGenre>
             )}

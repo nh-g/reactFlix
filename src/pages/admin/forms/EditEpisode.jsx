@@ -1,4 +1,4 @@
-//Local Files
+// Project files
 import fields from "pages/admin/assets/fields-episode.json";
 import InputField from "components/shared/InputField";
 import Player from "components/shared/Player";
