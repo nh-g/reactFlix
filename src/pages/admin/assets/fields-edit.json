@@ -24,6 +24,14 @@
     "required": false
   },
   {
+    "key": "logo_url",
+    "label": "Logo link",
+    "placeholder": "http://www... .jpeg",
+    "type": "text",
+    "mode": "create",
+    "required": false
+  },
+  {
     "key": "trailer",
     "label": "Youtube trailer ",
     "placeholder": "URL...",
