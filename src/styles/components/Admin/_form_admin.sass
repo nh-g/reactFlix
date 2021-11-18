@@ -25,8 +25,9 @@
             margin: .3em 0
     .selector
         grid-area: selection
-        display: flex
+        // display: flex
         flex-direction: column
+        // margin: auto
         label
             display: flex
             flex-direction: column
@@ -36,7 +37,7 @@
         ul
             padding: 1em 0
             display: grid
-            grid-template-columns: repeat(3,1fr)
+            grid-template-columns: repeat(5,1fr)
 
             li
                 margin: .2em 0
@@ -53,7 +54,7 @@
         width: 100%
         display: grid
         gap: 1em
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr 1fr
         grid-template-rows: repeat(4,min-content)
         grid-template-areas: "title imgUrl year" "description videoUrl duration" "description cast tags" "description genres none"
 

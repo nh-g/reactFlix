@@ -1,7 +1,7 @@
 // NPM packages
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-
+import { RiDeleteBinLine } from "react-icons/ri";
 // Project files
 import fields from "../assets/fields-edit.json";
 import InputField from "components/shared/InputField";
@@ -76,7 +76,7 @@ export default function EditForm({ data }) {
           type="button"
           onClick={(e) => onDelete(e, item)}
         >
-          X Delete Title
+          <RiDeleteBinLine />
         </button>
       </>
     </li>

@@ -1,6 +1,7 @@
-export default function EpisodesList({ data, setEpisodeId, removeEpisode }) {
-  //console.log(data);
+// NPM packages
+import { RiDeleteBinLine } from "react-icons/ri";
 
+export default function EpisodesList({ data, setEpisodeId, removeEpisode }) {
   const Episodes = data.map((item, index) => {
     const episodeNumber = index + 1;
 
@@ -21,7 +22,7 @@ export default function EpisodesList({ data, setEpisodeId, removeEpisode }) {
           type="button"
           onClick={() => removeEpisode(index)}
         >
-          x
+          <RiDeleteBinLine />
         </button>
       </li>
     );
