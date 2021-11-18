@@ -5,6 +5,10 @@ import { NavLink } from "react-router-dom";
 // Project files
 import Logo from "assets/images/reactflix.png";
 import Actions from "./Actions";
+import {
+  ROUTE_BROWSE,
+  ROUTE_FILTER,
+} from "constants/routes";
 
 const NavBar = () => {
   const [showBackground, setShowBackground] = useState(0);
@@ -26,17 +30,20 @@ const NavBar = () => {
         </NavLink>
 
         <nav>
-          <NavLink to="/browse" className="nav-item">
+          <NavLink to={ROUTE_BROWSE} className="nav-item">
             Home
           </NavLink>
-          <NavLink to="/genre/serie" className="nav-item">
+          <NavLink to={`${ROUTE_FILTER}/series`} className="nav-item">
             Series
           </NavLink>
-          <NavLink to="/genre/film" className="nav-item">
+          <NavLink to={`${ROUTE_FILTER}/film`} className="nav-item">
             Films
           </NavLink>
-          <NavLink to="/genre/documentary" className="nav-item">
+          <NavLink to={`${ROUTE_FILTER}/documentary`} className="nav-item">
             Documentaries
+          </NavLink>
+          <NavLink to={`${ROUTE_BROWSE}/myList`} className="nav-item">
+            My List
           </NavLink>
         </nav>
       </div>
