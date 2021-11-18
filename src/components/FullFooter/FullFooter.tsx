@@ -6,7 +6,7 @@ import {
 } from 'react-icons/ai';
 import { GridMenu } from '..';
 import { MenuLink } from 'types/landing/types';
-import mergeClassNames from '../../utils/merge-class-names';
+import mergeClassNames from '../../scripts/merge-class-names';
 import LanguagePicker from '../LanguagePicker/LanguagePicker';
 import './Footer.css';
 

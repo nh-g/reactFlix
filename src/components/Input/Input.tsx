@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import mergeClassNames from '../../utils/merge-class-names';
+import mergeClassNames from '../../scripts/merge-class-names';
 import './Input.css';
 
 interface Props {

@@ -2,7 +2,7 @@ import React from 'react';
 import './LanguagePicker.css';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { IconContext } from 'react-icons';
-import mergeClassNames from '../../utils/merge-class-names';
+import mergeClassNames from '../../scripts/merge-class-names';
 
 const LanguagePicker: React.FC<React.LabelHTMLAttributes<HTMLLabelElement>> = ({
   ...props

@@ -1,5 +1,4 @@
-//@ts-nocheck
-// NPM packages
+// Project files
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -19,7 +18,7 @@ export async function createAccount(email: string, password: string) {
     );
     account.isCreated = true;
     account.payload = userCredential.user.uid;
-  } catch (error) {
+  } catch (error: any) {
     console.error("auth,js error", error);
     account.payload = error.code;
   }
@@ -37,7 +36,7 @@ export async function signIn(email: string, password: string) {
     );
     account.payload = userCredential.user.uid;
     account.isLogged = true;
-  } catch (error) {
+  } catch (error: any) {
     account.payload = getFriendlyError(error.code);
   }
   return account;
@@ -50,7 +49,7 @@ export async function recover(email: string) {
     await sendPasswordResetEmail(authInstance, email);
     account.payload = "Request sent, Please check your inbox";
     account.isReset = true;
-  } catch (error) {
+  } catch (error: any) {
     account.payload = error.message;
   }
   return account;

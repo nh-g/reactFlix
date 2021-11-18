@@ -1,6 +1,8 @@
-import React from 'react';
+// NPM packages
 import { Link } from 'react-router-dom';
-import mergeClassNames from '../../utils/merge-class-names';
+
+// Project files
+import mergeClassNames from 'scripts/merge-class-names';
 import './Button.css';
 
 interface Props {

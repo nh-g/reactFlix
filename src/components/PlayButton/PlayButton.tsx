@@ -1,7 +1,7 @@
 import React from 'react';
 import { GrPlayFill } from 'react-icons/gr';
 import { Button } from '..';
-import mergeClassNames from '../../utils/merge-class-names';
+import mergeClassNames from '../../scripts/merge-class-names';
 import './PlayButton.css';
 
 interface Props {

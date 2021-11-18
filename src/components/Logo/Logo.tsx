@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ROUTE_BROWSE, ROUTE_HOME } from "../../constants/routes";
 import { useAuth } from 'state/AuthProvider';
-import mergeClassNames from '../../utils/merge-class-names';
+import mergeClassNames from '../../scripts/merge-class-names';
 import './Logo.css';
 
 const Logo = ({ ...rest }) => {
