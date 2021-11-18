@@ -3,7 +3,7 @@ import { useState, FC } from "react";
 import { useHistory } from "react-router-dom";
 
 //Local Files
-import loupe from "assets/images/loupe.png";
+import searchIcon from "assets/images/search.png";
 
 const SearchBar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,14 +12,15 @@ const SearchBar: FC = () => {
   return (
     <div className={isOpen ? "searchbar-open" : "searchbar"}>
       <button onClick={() => setIsOpen(!isOpen)}>
-        <img src={loupe} alt="" />
+        <img src={searchIcon} alt="" />
       </button>
       {isOpen && (
         <input
+          required
           type="text"
           placeholder="Titles"
-          onChange={(e) => {
-            history.push(`/search/${e.target.value}`);
+          onChange={(event) => {
+            history.push(`/search/${event.target.value.replace(/\s/g, "")}`);
           }}
         />
       )}

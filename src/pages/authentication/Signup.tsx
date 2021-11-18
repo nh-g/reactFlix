@@ -38,7 +38,7 @@ export default function Signup() {
   async function onSuccess(uid: string) {
     const newUser = {
       username: form.username,
-      role: "client",
+      role: "viewer",
     };
     await createDocumentWithId("users", uid, newUser);
     setLoggedIn(true);

@@ -1,7 +1,7 @@
-//NPM Packages
+// NPM packages
 import { NavLink } from "react-router-dom";
 
-//Local files
+// Project files
 import Logo from "assets/images/reactflix.png";
 
 const Header = () => {

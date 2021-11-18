@@ -31,7 +31,7 @@ export default function Search() {
         <main className="page-home page-search">
           {results.length === 0 && <h1>No titles found ... </h1>}
           {results.length > 0 && (
-            <ThumbnailsGenre data={results}>Results</ThumbnailsGenre>
+            <ThumbnailsGenre data={results}> Results </ThumbnailsGenre>
           )}
         </main>
       )}

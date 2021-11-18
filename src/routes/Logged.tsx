@@ -31,11 +31,12 @@ export default function Logged() {
       <Route path={ROUTE_BROWSE} component={Browse} />
 
       <Route path={`${ROUTE_SEARCH}/:query`} component={Search} />
+      <Route exact path= {ROUTE_SEARCH} component={Search} />
+
       <Route path={`${ROUTE_FILTER}/:genreName`} component={Genre} />
 
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
-
     </>
   );
 }
