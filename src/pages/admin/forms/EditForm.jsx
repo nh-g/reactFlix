@@ -109,7 +109,7 @@ export default function EditForm({ data }) {
             <EditSerie state={form} setForm={setForm} handleDelete={onDelete} />
           )}
           <p>{errorMessage}</p>
-          <button className="btn btn-submit btn-white">Submit</button>{" "}
+          <button className="btn btn-submit btn-red">Submit</button>{" "}
         </>
       )}
     </form>

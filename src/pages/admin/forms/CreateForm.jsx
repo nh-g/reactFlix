@@ -83,7 +83,7 @@ export default function CreateForm() {
       )}
 
       <p>{errorMessage}</p>
-      <button className="btn btn-submit btn-white">Submit</button>
+      <button className="btn btn-submit btn-red">Submit</button>
     </form>
   );
 }

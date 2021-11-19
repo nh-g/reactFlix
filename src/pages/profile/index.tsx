@@ -13,7 +13,7 @@ export default function Profile() {
 
   const [editing, setEditing] = useState(false);
 
-  const { avatar, username } = user;
+  const { avatar, username, DOB } = user;
 
   const Avatar =
     avatar === "" || avatar === null || avatar === undefined
@@ -25,16 +25,25 @@ export default function Profile() {
       <h1>My Profile</h1>
 
       <br />
-      <main className="page-home">
+      <main className="page-home profile">
         <img src={Avatar} alt="user generated content" className="avatar" />
-        <br />
+        <h2>{username}</h2>
+
         <button className="btn-select" onClick={() => setEditing(!editing)}>
           Edit Profile
         </button>
-        <br />
-        <h2>Username: {username}</h2>
+        
+        {!editing && (
+          <>
+            <div className="profile-item">
+              <h3>Date of Birth</h3>
+              <h3>{DOB}</h3>
+            </div>
+          </>
+        )}
+
         {editing && (
-          <EditProfile setEditing={setEditing} user={user} setUser= {setUser} />
+          <EditProfile setEditing={setEditing} user={user} setUser={setUser} />
         )}
       </main>
 

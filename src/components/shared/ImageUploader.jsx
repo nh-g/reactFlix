@@ -25,7 +25,7 @@ export default function ImageUploader({imageURL, setImageURL, title}) {
     }
 
     return (
-      <label className="custom-file-chooser">
+      <label className="profile-item">
         <input
           accept="image/gif, image/jpeg, image/png"
           onChange={(event) => onImageChange(event)}

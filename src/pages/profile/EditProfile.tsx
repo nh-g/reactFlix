@@ -22,7 +22,7 @@ export default function EditProfile({ setEditing, user, setUser }: iProps) {
     const profile = {
       id: user.id,
       username: name,
-      //   avatar: imageURL,
+      avatar: imageURL,
       DOB: DOB,
     };
     onUpdate(profile);
@@ -37,23 +37,25 @@ export default function EditProfile({ setEditing, user, setUser }: iProps) {
 
   return (
     <div>
-      {/* <ImageUploader
+      <ImageUploader
         imageURL={imageURL}
         setImageURL={setImageURL}
         title={name}
-      /> */}
-      <label>
+      />
+      <label className="profile-item">
         <h4>Username</h4>
         <input
+          className="username"
           type="text"
           placeholder={user.DOB}
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
       </label>
-      <label>
+      <label className="profile-item">
         <h4>D.O.B</h4>
         <input
+          className="DOB"
           type="text"
           placeholder="DOB, e.g. 07/12/1984"
           value={DOB}
@@ -61,12 +63,15 @@ export default function EditProfile({ setEditing, user, setUser }: iProps) {
         />
       </label>
 
-      <div className="form-admin">
+      <div className="edit-buttons">
         <button onClick={updateProfile} className="btn-white">
           Update
         </button>
-        <button onClick={() => setEditing(false)} className="btn-white">
+        <button onClick={() => setEditing(false)} className="btn-transparent">
           Cancel
+        </button>
+        <button onClick={() => setEditing(false)} className="btn-red">
+          Delete
         </button>
       </div>
     </div>
