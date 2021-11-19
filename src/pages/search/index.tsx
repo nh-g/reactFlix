@@ -6,7 +6,7 @@ import useFetch from "hooks/useFetch";
 import { searchTitle } from "scripts/getItem";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbnailsGenre from "../../components/shared/ThumbnailsGrid";
+import ThumbnailsGrid from "../../components/shared/ThumbnailsGrid";
 import Footer from "components/shared/Footer";
 
 interface iProps {
@@ -31,7 +31,7 @@ export default function Search() {
         <main className="page-home page-search">
           {results.length === 0 && <h1>No titles found ... </h1>}
           {results.length > 0 && (
-            <ThumbnailsGenre data={results}> Results </ThumbnailsGenre>
+            <ThumbnailsGrid data={results}> Results </ThumbnailsGrid>
           )}
         </main>
       )}

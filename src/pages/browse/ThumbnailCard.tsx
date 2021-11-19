@@ -1,18 +1,17 @@
 // NPM packages
-import { useState} from "react";
+import { useState } from "react";
 
 // Project files
-import Modal from "components/Modal";
-import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
 import iTitle from "types/iTitle";
-import ThumbsMeta from "components/shared/ThumbsMeta";
+import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
+import Modal from "components/Modal";
+import ThumbnailMeta from "components/shared/ThumbnailMeta";
 
 interface iProps {
   item: iTitle;
 }
 
-export default function ThumbsItem({ item }: iProps) {
-  
+export default function ThumbnailCard({ item }: iProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
@@ -34,9 +33,10 @@ export default function ThumbsItem({ item }: iProps) {
         ) : (
           <h3>{item.title}</h3>
         )}
-        <ThumbsMeta element={item} />
+        <ThumbnailMeta element={item} />
       </button>
+
       <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
     </li>
   );
-};
+}

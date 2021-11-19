@@ -2,10 +2,10 @@
 import { useState} from "react";
 
 // Project files
-import Modal from "components/Modal";
-import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
 import iTitle from "types/iTitle";
-import ThumbsMeta from "components/shared/ThumbsMeta";
+import { freezeBackground, unFreezeBackground } from "scripts/setBackground";
+import Modal from "components/Modal";
+import ThumbnailMeta from "components/shared/ThumbnailMeta";
 
 interface iProps {
   item: iTitle;
@@ -37,7 +37,7 @@ export default function Thumbs10Item({ item, imgPath }:iProps){
           )}
           <img className="thumb" src={item.image_url} alt="" />
         </div>
-        <ThumbsMeta element={item} />
+        <ThumbnailMeta element={item} />
       </button>
       <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
     </li>

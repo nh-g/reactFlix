@@ -1,15 +1,15 @@
 // Project files
 import iTitle from "types/iTitle";
-import ThumbsItem from "pages/browse/ThumbsItem";
+import ThumbnailCard from "pages/browse/ThumbnailCard";
 
 interface iProps {
   data: iTitle[];
   children: string;
 }
 
-export default function ThumbnailsGenre({ data, children }: iProps) {
+export default function ThumbnailsGrid({ data, children }: iProps) {
   const Thumbnails = data.map((item, index) => (
-    <ThumbsItem key={index} item={item} />
+    <ThumbnailCard key={index} item={item} />
   ));
 
   return (

@@ -1,16 +1,14 @@
-// NPM packages
-import ThumbsItem from "pages/browse/ThumbsItem";
-import { FC } from "react";
-import iTitle from "types/iTitle";
-
 // Project files
+import iTitle from "types/iTitle";
+import ThumbnailCard from "pages/browse/ThumbnailCard";
+
 interface iProps {
   data: iTitle[];
   children: string;
 }
-const Thumbs: FC<iProps> = ({ data, children }) => {
+export default function Thumbs({ data, children }: iProps){
   const Thumbnails = data.map((item, index) => (
-    <ThumbsItem key={index} item={item} />
+    <ThumbnailCard key={index} item={item} />
   ));
 
   return (
@@ -22,4 +20,3 @@ const Thumbs: FC<iProps> = ({ data, children }) => {
     </>
   );
 };
-export default Thumbs;

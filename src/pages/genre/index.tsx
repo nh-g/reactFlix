@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "hooks/useFetch";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbnailsGenre from "../../components/shared/ThumbnailsGrid";
+import ThumbnailsGrid from "../../components/shared/ThumbnailsGrid";
 import Player from "components/shared/Player";
 import { getGenre } from "scripts/getItem";
 import Hero from "../../components/shared/Hero";
@@ -55,9 +55,9 @@ export default function Genre() {
 
             {genreTitles.length === 0 && <h1>No titles found ... </h1>}
             {genreTitles.length > 0 && (
-              <ThumbnailsGenre data={genreTitles}>
+              <ThumbnailsGrid data={genreTitles}>
                 {getHeading(genreName)}
-              </ThumbnailsGenre>
+              </ThumbnailsGrid>
             )}
           </main>
           <Footer />

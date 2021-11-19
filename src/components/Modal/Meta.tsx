@@ -1,7 +1,7 @@
 // Project files
 import iTitle from "types/iTitle";
 import Lister from "components/Modal/Lister";
-import AddToCart from "components/shared/AddToMyList"
+import AddToMyList from "components/shared/AddToMyList"
 
 interface iProps {
   element: iTitle;
@@ -21,7 +21,7 @@ export default function Meta ({ element }: iProps) {
         <p className="duration">{element.duration} </p>
         <span> | </span>
 
-        <AddToCart item={element} />
+        <AddToMyList item={element} />
       </div>
 
       <p className="description">{element.description}</p>
