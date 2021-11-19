@@ -19,6 +19,16 @@ export function getGenre(array, genre) {
   }
 }
 
+export function getMyListItem(array) {
+  if (array !== undefined) {
+    return array.filter((item) => {
+      return item.inMyList === true;
+    })
+  } else {
+    return [];
+  }
+}
+
 export function searchTitle(array, query) {
   if (query && array !== undefined) {
     return array.filter((item) => {
