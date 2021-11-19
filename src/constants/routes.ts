@@ -6,3 +6,4 @@ export const ROUTE_SEARCH = "/search";
 export const ROUTE_FILTER = "/genre";
 export const ROUTE_RESET = "/reset";
 export const ROUTE_ADMIN = "/admin";
+export const ROUTE_PROFILE = "/profile";

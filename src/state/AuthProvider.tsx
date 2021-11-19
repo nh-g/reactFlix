@@ -4,8 +4,11 @@ import iUser from "types/iUser";
 
 const AuthContext = createContext({
   user: {
+    id: "",
     username: "",
     role: "",
+    avatar: "",
+    DOB: "",
   },
   setLoggedIn: (status: boolean) => status,
   loggedIn: false,
@@ -13,10 +16,12 @@ const AuthContext = createContext({
 });
 
 export const AuthProvider: React.FC = ({ children }) => {
-  
   const [user, setUser] = useState<iUser | undefined>({
+    id: "",
     username: "",
     role: "",
+    avatar: "",
+    DOB: "",
   });
 
   const [loggedIn, setLoggedIn] = useState(false);
