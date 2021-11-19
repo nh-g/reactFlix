@@ -3,7 +3,7 @@ import { useState, useCallback, useEffect } from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 
 // Project files
-import "styles/base.sass";
+import "styles/styles.sass";
 import { useAuth } from "state/AuthProvider";
 import { getDocument } from "scripts/firebase/fireStore";
 import { BoxError, Spinner } from "components/shared/FetchItems";
