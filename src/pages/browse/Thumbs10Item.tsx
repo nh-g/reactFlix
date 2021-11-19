@@ -27,6 +27,9 @@ export default function Thumbs10Item({ item, imgPath }:iProps){
 
   return (
     <li className="track-item">
+      
+      <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
+
       <button onClick={openModal}>
         <img src={imgPath.default} alt="" className="rank" />
         <div className="wrapper">
@@ -39,7 +42,6 @@ export default function Thumbs10Item({ item, imgPath }:iProps){
         </div>
         <ThumbnailMeta element={item} />
       </button>
-      <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
     </li>
   );
 };

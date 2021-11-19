@@ -26,6 +26,8 @@ export default function ThumbnailCard({ item }: iProps) {
 
   return (
     <li className="track-item">
+      <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
+
       <button onClick={openModal}>
         <img src={item.image_url} alt="" className="thumbnail" />
         {item.logo_url ? (
@@ -35,8 +37,6 @@ export default function ThumbnailCard({ item }: iProps) {
         )}
         <ThumbnailMeta element={item} />
       </button>
-
-      <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
     </li>
   );
 }
