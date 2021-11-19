@@ -11,6 +11,9 @@ export default function MyList() {
   // Global state
   const { dispatch } = useTitles();
   const titles = useFetch("demo_title", dispatch);
+  // const { titles } = useTitles();
+  // console.log("MyList Page fetched titles", titles);
+
   const myList = getMyListItem(titles.data);
 
   //Local states
@@ -27,7 +30,10 @@ export default function MyList() {
         <div id="my-list">
           <h1>My List</h1>
           {myList.length === 0 && (
-            <h3>You have no movie in your list. Start add your favorite movie and save your own list.</h3>
+            <h3>
+              You have no movie in your list. Start add your favorite movie and
+              save your own list.
+            </h3>
           )}
 
           <br />

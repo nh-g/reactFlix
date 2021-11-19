@@ -5,6 +5,8 @@ import { BrowserRouter, Switch } from "react-router-dom";
 // Project files
 import "styles/styles.sass";
 import { useAuth } from "state/AuthProvider";
+import { useTitles } from "state/TitlesProvider";
+import useFetch from "hooks/useFetch";
 import { getDocument } from "scripts/firebase/fireStore";
 import { BoxError, Spinner } from "components/shared/FetchItems";
 import UnLogged from "routes/Unlogged";
@@ -35,15 +37,25 @@ export default function App() {
     fetchUser("users");
   }, [fetchUser]);
 
+    const path = "demo_title";
+    const { dispatch } = useTitles();
+    const { loading, data, error } = useFetch(path, dispatch);
+    // console.log("APP.jsx", data);
+
+
   return (
     <div className="App">
       {status === 0 && <Spinner />}
       {status === 2 && <BoxError />}
-      {status === 1 && (
+      {status === 1 && loading && <Spinner />}
+      {status === 1 && error && <p>{error}</p>}
+      {status === 1 && data && (
         <BrowserRouter>
           <Switch>{loggedIn ? <Logged /> : <UnLogged />}</Switch>
         </BrowserRouter>
       )}
+
+      {error && <p>{error}</p>}
     </div>
   );
 }

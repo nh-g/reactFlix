@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Project files
-import { useMyList } from "state/MyListProvider";
+import { useTitles } from "state/TitlesProvider";
 import iTitle from "types/iTitle";
 import { updateDocument } from "scripts/firebase/fireStore";
 
@@ -12,7 +12,7 @@ interface iProps {
 
 export default function AddToMyList({ item }: iProps) {
   // Global state
-  const { dispatch } = useMyList();
+  const { dispatch } = useTitles();
 
   //@ts-ignore
   const [toggler, setToggler] = useState(item.inMyList || false);
@@ -22,13 +22,10 @@ export default function AddToMyList({ item }: iProps) {
     let newItem = { ...item };
     newItem.inMyList = true;
 
-    dispatch({
-      type: "ADD_TO_CART",
-      item,
-    });
-
     //@ts-ignore
     await updateDocument("demo_title", item.id, newItem);
+    dispatch({ type: "UPDATE_TITLE", payload: newItem });
+
     setToggler(true);
   }
 
@@ -36,12 +33,10 @@ export default function AddToMyList({ item }: iProps) {
     let newItem = { ...item };
     newItem.inMyList = false;
 
-    dispatch({
-      type: "REMOVE_FROM_CART",
-      item,
-    });
     //@ts-ignore
     await updateDocument("demo_title", item.id, newItem);
+    dispatch({ type: "UPDATE_TITLE", payload: newItem });
+
     setToggler(false);
   }
 
