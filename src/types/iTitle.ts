@@ -14,4 +14,5 @@ export default interface iTitle {
   tags: string[];
   genre: string;
   seasons: iSeason[];
+  inMyList: boolean;
 }

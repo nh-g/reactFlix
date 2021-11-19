@@ -6,7 +6,7 @@ import useFetch from "hooks/useFetch";
 import { searchTitle } from "scripts/getItem";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbnailsGenre from "../genre/ThumbnailsGenre";
+import ThumbnailsGenre from "../../components/shared/ThumbnailsGrid";
 import Footer from "components/shared/Footer";
 
 interface iProps {

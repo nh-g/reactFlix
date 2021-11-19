@@ -50,6 +50,7 @@ export async function getDocument(path: string, id: string) {
 export async function updateDocument(path: string, id: string, data: object) {
   const docReference = doc(firestoreInstance, path, id);
   let updatedCourse = { ...data };
+
   await updateDoc(docReference, updatedCourse);
 }
 

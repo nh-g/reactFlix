@@ -14,7 +14,7 @@ export default function ThumbnailsGenre({ data, children }: iProps) {
 
   return (
     <>
-      <section className="genre-thumbs">
+      <section className="thumbs-grid">
         <h2 className="title"> {children}</h2>
         <ul className="track">{Thumbnails}</ul>
       </section>

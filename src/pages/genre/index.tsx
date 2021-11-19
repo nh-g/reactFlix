@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "hooks/useFetch";
 import { useTitles } from "state/TitlesProvider";
 import { BoxError, Spinner } from "components/shared/FetchItems";
-import ThumbnailsGenre from "./ThumbnailsGenre";
+import ThumbnailsGenre from "../../components/shared/ThumbnailsGrid";
 import Player from "components/shared/Player";
 import { getGenre } from "scripts/getItem";
 import Hero from "../../components/shared/Hero";

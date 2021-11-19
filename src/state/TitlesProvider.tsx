@@ -17,7 +17,7 @@ const initialState: iTitle[] = [];
 
 const TitlesContext = createContext<iContext>({
   titles: initialState,
-  dispatch: () => console.warn("CourseContext used outside provider"),
+  dispatch: () => console.warn("TitlesContext used outside provider"),
 });
 
 export function TitlesProvider({ children }: iProp) {

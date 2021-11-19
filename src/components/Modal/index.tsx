@@ -67,7 +67,7 @@ export default function Modal({ isOpen, onClose, element }: iProps) {
           )}
         </div>
       </div>
-    </>, //@ts-ignore
-    document.getElementById("modal")
+    </>, 
+    document.getElementById("modal")!
   );
 }
