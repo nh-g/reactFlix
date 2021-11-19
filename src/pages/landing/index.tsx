@@ -1,5 +1,5 @@
 // Project files
-import "./Home.css";
+import "./LandingPage.css";
 import footerLinks from "../../data/home-footer-links.json";
 import {
   FaqAccordion,
@@ -12,7 +12,7 @@ import {
   TVAnimation,
 } from "components";
 
-export default function Home() {
+export default function LandingPage() {
 
   return (
     <div className="Home">

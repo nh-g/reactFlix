@@ -11,7 +11,7 @@ import {
 import Login from "pages/authentication/Login";
 import SignUp from "pages/authentication/Signup";
 import Reset from "pages/authentication/Reset";
-import LandingPage from "pages/landing/Home";
+import LandingPage from "pages/landing";
 
 export default function UnLogged() {
   return (

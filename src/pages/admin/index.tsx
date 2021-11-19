@@ -10,7 +10,7 @@ import { BoxError, Spinner } from "components/shared/FetchItems";
 import useFetch from "hooks/useFetch";
 import Footer from "components/shared/Footer";
 
-export default function Admin() {
+export default function AdminDashboard() {
   // Global state
   const { dispatch } = useTitles();
   const titles = useFetch("demo_title", dispatch);

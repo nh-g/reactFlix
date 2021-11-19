@@ -14,7 +14,7 @@ import Footer from "components/shared/Footer";
 interface iProps {
   genreName: string;
 }
-export default function Genre() {
+export default function FilteredPage() {
   // Global state
   const { dispatch } = useTitles();
   const titles = useFetch("demo_title", dispatch);

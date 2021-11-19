@@ -16,9 +16,9 @@ import Browse from "pages/browse";
 import Login from "pages/authentication/Login";
 import SignUp from "pages/authentication/Signup";
 import NavBar from "components/shared/NavBar";
-import Admin from "pages/admin/Admin";
-import Search from "pages/search";
-import Genre from "pages/genre";
+import AdminDashboard from "pages/admin";
+import SearchPage from "pages/search";
+import FilteredPage from "pages/filted-by-genre";
 import MyList from "pages/myList";
 
 export default function Logged() {
@@ -27,15 +27,15 @@ export default function Logged() {
   return (
     <>
       <NavBar />
-      {user.role === "admin" && <Route path={ROUTE_ADMIN} component={Admin} />}
+      {user.role === "admin" && <Route path={ROUTE_ADMIN} component={AdminDashboard} />}
 
       <Route exact path={ROUTE_BROWSE} component={Browse} />
       <Route path={`${ROUTE_BROWSE}/myList`} component={MyList} />
 
-      <Route path={`${ROUTE_SEARCH}/:query`} component={Search} />
-      <Route exact path={ROUTE_SEARCH} component={Search} />
+      <Route path={`${ROUTE_SEARCH}/:query`} component={SearchPage} />
+      <Route exact path={ROUTE_SEARCH} component={SearchPage} />
 
-      <Route path={`${ROUTE_FILTER}/:genreName`} component={Genre} />
+      <Route path={`${ROUTE_FILTER}/:genreName`} component={FilteredPage} />
 
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
