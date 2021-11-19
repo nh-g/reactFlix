@@ -1,5 +1,5 @@
 // NPM packages
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 // Project files
 import {
@@ -21,6 +21,8 @@ export default function UnLogged() {
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
       <Route path={ROUTE_RESET} component={Reset} />
+
+      <Redirect to={ROUTE_HOME} />
     </>
   );
 }
