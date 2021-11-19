@@ -1,46 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Create your own Netflix content - Netflix Clone with inbuilt CMS
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+[![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+[![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## 1. About project
 
-### `yarn start`
+The goal of this project was to implement authentication, allow authorized users to create, read, update and delete the data in realtime. For it, I have built a content management system where the admin can operate CRUD. The data then can be fetched to display in shape of Netflix's content. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Talking about skill achievement here, I have learnt to handle complicated project and to handle detail-oriented requirement to make the UI look as much as Netflix as possible.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Check [Live demo](https://reactflix-giang.web.app/)
 
-### `yarn test`
+To access the Admin dashboard, here are credentials:
+```
+- email : admin@gmail.com
+- password : admin1234
+```
+## 2. Features
+- Admin realtime content management
+- Firebase authentication
+- Firebase auth provider authentication
+- Account creation and edit
+- File upload
+- Profile edit
+- Video player 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Upcoming updates
+- Multiple accounts upon one email
+- Firebase authentication by Facebook
+- Firebase security 
+## 3. Setup
 
-### `yarn build`
+These are the instructions to run the project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Open the terminal and navigate to the folder where this readme file is located.
+2. Install dependencies:
+   `npm install`
+3. run the project:
+   `npm start`
+4. Open a browser at : `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. To access Admin Dashboard
+   
+Login to your google account and create a new firebase project [here](https://console.firebase.google.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The following config can be found on your firebase project settings.
+```
+// SAMPLE CONFIG .env.dev, you should put the actual config details found on your project settings
 
-### `yarn eject`
+FIREBASE_API_KEY=AIzaKJgkjhSdfSgkjhdkKJdkjowf
+FIREBASE_AUTH_DOMAIN=yourauthdomin.firebaseapp.com
+FIREBASE_DB_URL=https://yourdburl.firebaseio.com
+FIREBASE_PROJECT_ID=yourproject-id
+FIREBASE_STORAGE_BUCKET=yourstoragebucket.appspot.com
+FIREBASE_MSG_SENDER_ID=43597918523958
+FIREBASE_APP_ID=234598789798798fg3-034
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. To perform CRUD operations as Authorized User (Admin)
+   
+- Navigate to your site to /signup
+- Create an account for yourself
+- Go to your firestore collection `users` collection and edit the account you've just created. Change the role from `viewer` to `admin`.
+- Reload or signin again to acces Admin dashboard.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 4. Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Firebase Hosting
+- Firebase Firestore DB
+- Firebase Cloud Storage
+- react-youtube
+  
