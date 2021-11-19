@@ -1,6 +1,5 @@
 // NPM packages
 import { NavLink, useHistory } from "react-router-dom";
-import { FC } from "react";
 
 // Project files
 import avatar from "assets/images/avatar.png";
@@ -8,9 +7,8 @@ import droparrow from "assets/icon/droparrow.svg";
 import { useAuth } from "state/AuthProvider";
 import SearchBar from "./SearchBar";
 
-const Actions: FC = () => {
+export default function ProfileDropBox() {
   // Global state
-  //@ts-ignore
   const { user, setLoggedIn } = useAuth();
   const history = useHistory();
 
@@ -40,5 +38,4 @@ const Actions: FC = () => {
       </div>
     </div>
   );
-};
-export default Actions;
+}

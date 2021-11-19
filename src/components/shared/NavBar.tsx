@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 // Project files
 import Logo from "assets/images/reactflix.png";
-import Actions from "./Actions";
+import Actions from "./ProfileDropBox";
 import {
   ROUTE_BROWSE,
   ROUTE_FILTER,
