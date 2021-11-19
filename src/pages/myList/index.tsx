@@ -14,7 +14,6 @@ export default function MyList() {
   const myList = getMyListItem(titles.data);
 
   //Local states
-  const randomIndex = Math.floor(Math.random() * titles.data.length);
   const series = getGenre(myList, "series");
   const films = getGenre(myList, "film");
   const documentaries = getGenre(myList, "documentary");

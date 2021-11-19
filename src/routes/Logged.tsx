@@ -1,5 +1,5 @@
 // NPM packages
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 // Project files
 import { useAuth } from "state/AuthProvider";
@@ -39,6 +39,8 @@ export default function Logged() {
 
       <Route path={ROUTE_LOGIN} component={Login} />
       <Route path={ROUTE_SIGNUP} component={SignUp} />
+
+      <Redirect to={ROUTE_BROWSE} />
     </>
   );
 }
