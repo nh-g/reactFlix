@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 // Project files
 import fields from "../assets/fields-create.json";
 import InputField from "components/shared/InputField";
-import CreateSerie from "./CreateSerie";
+import CreateSeries from "./CreateSeries";
 import { createDoc } from "scripts/firebase/fireStore";
 
 export default function CreateForm() {
@@ -13,7 +13,7 @@ export default function CreateForm() {
   const [form, setForm] = useState({
     title: "",
     description: "",
-    genre: "film",
+    genre: "series",
     image_url: "",
     logo_url: "",
     trailer: "",
@@ -43,7 +43,7 @@ export default function CreateForm() {
       title.seasons = null;
     }
     await createDoc("demo_title", title);
-    alert("Title created");
+    alert(`${form.title}created`);
     history.push("/browse");
   }
 
@@ -67,7 +67,7 @@ export default function CreateForm() {
             setForm({ ...form, genre: e.target.value });
           }}
         >
-          <option value="series">Serie</option>
+          <option value="series">Series</option>
           <option value="film">Film</option>
           <option value="documentary">Documentary</option>
         </select>
@@ -79,7 +79,7 @@ export default function CreateForm() {
       </div>
 
       {form.genre === "series" && (
-        <CreateSerie state={form} setForm={setForm} />
+        <CreateSeries state={form} setForm={setForm} />
       )}
 
       <p>{errorMessage}</p>

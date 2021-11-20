@@ -18,7 +18,7 @@
   {
     "key": "description",
     "label": "Description",
-    "placeholder": "Short description",
+    "placeholder": "A movie synopsis summarizes the film's storyline",
     "type": "textarea",
     "mode": "create",
     "required": true
@@ -43,7 +43,7 @@
   {
     "key": "trailer",
     "label": "Youtube trailer ",
-    "placeholder": "URL...",
+    "placeholder": "https://www.youtube.com/watch?... ",
     "type": "text",
     "mode": "create",
     "required": true
@@ -59,7 +59,7 @@
   {
     "key": "duration",
     "label": "Duration ",
-    "placeholder": "2 seasons or 46m or 1h30",
+    "placeholder": "3 Seasons or 26m or 1h 31m",
     "type": "text",
     "mode": "create",
     "required": true
@@ -67,7 +67,7 @@
   {
     "key": "cast",
     "label": "Cast ",
-    "placeholder": "Actor 1,Actor 2,...",
+    "placeholder": "Actor 1, Actor 2,...",
     "type": "text",
     "mode": "create",
     "required": true
@@ -75,15 +75,15 @@
   {
     "key": "genres",
     "label": "Genres",
-    "placeholder": "Drama, Comedy,...",
+    "placeholder": "Crime Films, Dramas, Thrillers...",
     "type": "text",
     "mode": "create",
     "required": true
   },
   {
     "key": "tags",
-    "label": "Tags",
-    "placeholder": "Italian, Mafia,...",
+    "label": "This Programme Is",
+    "placeholder": "Understated, Intimate, Heartfelt, Feel-Good...",
     "type": "text",
     "mode": "create",
     "required": true

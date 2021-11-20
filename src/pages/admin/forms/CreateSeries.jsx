@@ -1,5 +1,5 @@
 import remove from "assets/icon/remove.png";
-export default function CreateSerie({ state, setForm }) {
+export default function CreateSeries({ state, setForm }) {
   //methods
 
   function addSeason() {
