@@ -1,11 +1,9 @@
-// NPM packages
-import { FC } from "react";
 interface iProps {
   children: string;
   target: string;
   hook: any[];
 }
-const SortButton: FC<iProps> = ({ children, target, hook }) => {
+export default function SortButton({ children, target, hook }: iProps) {
   const [selection, setSelection] = hook;
 
   return (
@@ -23,4 +21,3 @@ const SortButton: FC<iProps> = ({ children, target, hook }) => {
     </button>
   );
 };
-export default SortButton;

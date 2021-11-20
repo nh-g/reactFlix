@@ -1,7 +1,7 @@
 // NPM packages
 import { useState } from "react";
 
-//Local imports
+// Project files
 import Sorter from "pages/admin/Sorter";
 import CreateForm from "./forms/CreateForm";
 import EditForm from "./forms/EditForm";

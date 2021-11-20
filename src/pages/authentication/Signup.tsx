@@ -2,7 +2,7 @@
 import { useState, useEffect, FormEvent } from "react";
 import { useHistory, Link } from "react-router-dom";
 
-//Local imports
+// Project files
 import fields from "data/authentication-fields/fields-signup.json";
 import InputField from "../../components/shared/InputField";
 import { createAccount } from "scripts/firebase/authentication";

@@ -61,7 +61,6 @@ export default function CreateForm() {
     <form onSubmit={onSubmit} className="form-admin">
       <label className="selector">
         <h2>Select genre : </h2>
-        {/* {form.genre} */}
         <select
           onChange={(e) => {
             setForm({ ...form, genre: e.target.value });

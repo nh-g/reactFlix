@@ -1,13 +1,10 @@
-// NPM packages
-import { FC } from "react";
-
 // Project files
 import SortButton from "pages/admin/SortButton";
 
 interface iProps {
   hook: any[];
 }
-const Sorter: FC<iProps> = ({ hook }) => {
+export default function  Sorter({ hook }: iProps){
   return (
     <section className="sorter">
       <SortButton target="create" hook={hook}>
@@ -20,4 +17,4 @@ const Sorter: FC<iProps> = ({ hook }) => {
     </section>
   );
 };
-export default Sorter;
+;
