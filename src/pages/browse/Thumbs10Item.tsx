@@ -30,7 +30,7 @@ export default function Thumbs10Item({ item, imgPath }:iProps){
       
       <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
 
-      <button onClick={openModal}>
+      <div className = "card-container" onClick={openModal}>
         <img src={imgPath.default} alt="" className="rank" />
         <div className="wrapper">
           {item.logo_url ? (
@@ -41,7 +41,7 @@ export default function Thumbs10Item({ item, imgPath }:iProps){
           <img className="thumb" src={item.image_url} alt="" />
         </div>
         <ThumbnailMeta element={item} />
-      </button>
+      </div>
     </li>
   );
 };

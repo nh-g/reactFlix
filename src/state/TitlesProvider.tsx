@@ -23,7 +23,7 @@ const TitlesContext = createContext<iContext>({
 export function TitlesProvider({ children }: iProp) {
   // Local state
   const [titles, dispatch] = useReducer(titlesReducer, initialState);
-  // console.log("TitlesProvider.jsx", titles);
+  console.log("TitlesProvider.jsx", titles);
 
   return (
     <TitlesContext.Provider value={{ titles, dispatch }}>

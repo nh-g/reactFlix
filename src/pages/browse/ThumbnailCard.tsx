@@ -28,15 +28,15 @@ export default function ThumbnailCard({ item }: iProps) {
     <li className="track-item">
       <Modal element={item} isOpen={isModalOpen} onClose={closeModal} />
 
-      <button onClick={openModal}>
-        <img src={item.image_url} alt="" className="thumbnail" />
+      <div className = "card-container" onClick={openModal}>
+        <img src={item.image_url} alt="" className="thumbnail" onClick={openModal}/>
         {item.logo_url ? (
           <img src={item.logo_url} alt="" className="title-illustration" />
         ) : (
           <h3>{item.title}</h3>
         )}
         <ThumbnailMeta element={item} />
-      </button>
+      </div>
     </li>
   );
 }
